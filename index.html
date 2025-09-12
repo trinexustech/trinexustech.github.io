@@ -25,6 +25,12 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            font-size: 15px;
+        }
+        
+        p {
+            font-size: 15px;
+            color: #666;
         }
 
         /* --- Full-width Bleed Fix --- */
@@ -478,14 +484,14 @@
         /* --- Technology Stack --- */
         .tech-stack-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             text-align: center;
         }
         
         .tech-card {
             background: #fff;
-            padding: 20px;
+            padding: 25px 20px;
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
@@ -512,7 +518,7 @@
         }
 
         .tech-card p {
-            font-size: 0.9rem;
+            font-size: 14px;
             color: #666;
         }
 
@@ -595,6 +601,11 @@
             display: block;
             color: #000;
         }
+        
+        .value-item span {
+            font-size: 15px;
+            color: #666;
+        }
 
         /* --- Contact Section --- */
         .contact-grid {
@@ -663,6 +674,7 @@
             align-items: center;
             gap: 15px;
             margin-bottom: 15px;
+            font-size: 15px;
         }
         
         .contact-info-card ul li svg {
@@ -918,8 +930,14 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 992px) {
-             .contact-grid, .ai-grid {
+             .contact-grid, .ai-grid, .tech-stack-grid {
                 grid-template-columns: 1fr;
+            }
+            .ai-grid {
+                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+            .tech-stack-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
         }
         
@@ -1276,12 +1294,12 @@
                 </div>
                 <div class="tech-stack-grid">
                     <div class="tech-card">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4IDIzMi42YTEwNCAxMDQgMCAxIDAgMC0yMDggMTA0IDEwNCAwIDAgMCAwIDIwOFptNzEuMS0xNTguM2ExMiAxMiAwIDAgMS0xLjcgMTZsLTM0LjcgNjEuNmE4IDggMCAwIDEtNy4yIDRsLTI3LjItNC42YTYgNiAwIDAgMC02IDUuM2w0LjMgMjUuOGE2IDYgMCAwIDEwIDUuNGwxNC4yIDIuNGE2IDYgMCAwIDEgNSA3LjFsLTcuNyA0NC4yYTggOCAwIDAgMS03LjcgNS43SDk3LjZhOCA4IDAgMCAxLTcuNy01LjdsLTcuNy00NC4yYTYgNiAwIDAgMSA1LTcuMWwxNC4yLTIuNGE2IDYgMCAwIDEgNi01LjRsNC4zLTI1LjhhNiA2IDAgMCAwLTYtNS4zbC0yNy4yIDQuNmE4IDggMCAwIDEtNy4yLTRsLTM0LjctNjEuNmExMiAxMiAwIDAgMSAxNC4zLTIwLjJsMzQuNyA2MS41YTggOCAwIDAgMSAuMiAxMGw1MS41IDguNmE2IDYgMCAwIDAgNS41LTUuNmwtOC42LTUxLjhhNiA2IDAgMCAxIDUuNS02LjVsMzQuNy01LjlhMTIgMTIgMCAwIDEgMTYgMS43Wm0tNzEuMSAxMjUuOWExMiAxMiAwIDEgMSAxMi0xMiAxMiAxMiAwIDAgMS0xMiAxMloiLz48L3N2Zz4=" alt="Mistral AI Logo"/>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4IDIzMi42YTEwNCAxMDQgMCAxIDAgMC0yMDggMTA0IDEwNCAwIDAgMCAwIDIwOFptNzEuMS0xNTguM2ExMiAxMiAwIDAgMS0xLjcgMTZsLTM0LjcgNjEuNmE4IDggMCAwIDEtNy4yIDRsLTI3LjItNC42YTYgNiAwIDAgMC02IDUuM2w0LjMgMjUuOGE2IDYgMCAwIDEwIDUuNGwxNC4yIDIuNGE2IDYgMCAwIDEgNSA3LjFsLTcuNyA0NC4yYTggOCAwIDAgMS03LjcgNS43SDk3LjZhOCA4IDAgMCAxLTcuNy01LjdsLTcuNy00NC4yYTYgNiAwIDAgMSA1LTcuMWwxNC4yLTIuNGE2IDYgMCAwIDEgNi01LjRsNC4zLTI1LjhhNiA2IDAgMCAwLTYtNS4zbC0yNy4yIDQuNmE4IDggMCAwIDEtNy4yLTRsLTM0LjctNjEuNmExMiAxMiAwIDAgMSAxNC4zLTIwLjJsMzQuNyA2MS41YTggOCAwIDAgMSAuMiAxMGw1iellaud8bWMtMS45LTUxLjhhNiA2IDAgMCAxIDUuNS02LjVsMzQuNy01LjlhMTIgMTIgMCAwIDEgMTYgMS43Wm0tNzEuMSAxMjUuOWExMiAxMiAwIDEgMSAxMi0xMiAxMiAxMiAwIDAgMS0xMiAxMloiLz48L3N2Zz4=" alt="Mistral AI Logo"/>
                         <h3>Mistral AI</h3>
                         <p>Advanced, open-source large language models from Europe.</p>
                     </div>
                      <div class="tech-card">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
                         <h3>Hugging Face</h3>
                         <p>The leading platform for open-source models and datasets.</p>
                     </div>
@@ -1324,16 +1342,23 @@
             <div class="container">
                 <div class="section-header">
                      <h1>About <span>Trinexus Technologies</span></h1>
+                     <p>Founded with a vision to democratize artificial intelligence across industries, Trinexus Technologies has emerged as a leading technology holding company specializing in cutting-edge AI solutions that drive real business transformation.</p>
                 </div>
                 <div class="about-grid">
                     <div class="about-card">
                         <h3>Our Mission</h3>
-                        <p>To accelerate European progress by creating intelligent systems that solve complex problems. We believe AI should augment human capabilities, not replace them, fostering innovation and growth across the continent.</p>
-                         <ul>
-                            <li>💡 Innovation-first approach to AI</li>
-                            <li>👥 Human-centered design principles</li>
-                            <li>🇪🇺 EU-wide impact through scalable solutions</li>
-                        </ul>
+                        <p>To accelerate European progress by creating intelligent systems that solve complex problems. We believe AI should augment human capabilities, not replace them.</p>
+                         <div style="margin-top: 20px;">
+                            <div class="value-item">
+                                <strong>💡 Innovation-First Approach</strong>
+                            </div>
+                            <div class="value-item">
+                                <strong>👥 Human-Centered Design</strong>
+                            </div>
+                             <div class="value-item">
+                                <strong>🇪🇺 EU-Wide Impact</strong>
+                            </div>
+                        </div>
                     </div>
                     <div class="about-card">
                         <h3>Core Values</h3>
@@ -1582,4 +1607,3 @@
     </script>
 </body>
 </html>
-
