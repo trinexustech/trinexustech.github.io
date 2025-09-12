@@ -6,7 +6,7 @@
     <title>Trinexus Technologies - EU AI Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* --- Base & Global Styles --- */
         * {
@@ -93,8 +93,12 @@
             color: #000;
         }
         
+        .nav-menu li a.nav-button {
+            color: #fff !important;
+        }
+        
         .nav-menu li a.nav-button:hover {
-            color: #fff;
+            color: #fff !important;
         }
         
         .nav-button {
@@ -146,7 +150,7 @@
         }
         
         .section-header h1 {
-            font-size: 2.5rem;
+            font-size: 40px;
             color: #000;
             margin-bottom: 8px;
         }
@@ -154,11 +158,11 @@
         .section-header h1 span {
             color: #666;
             display: block;
-            font-size: 2.2rem;
+            font-size: 40px;
         }
 
         .section-header p {
-            font-size: 1.1rem;
+            font-size: 15px;
             color: #666;
             max-width: 700px;
             margin: 0 auto;
@@ -167,24 +171,37 @@
         /* --- Hero Section --- */
         .hero {
             text-align: center;
-            padding: 40px 20px; /* Reduced padding */
+            padding: 40px 20px;
             background-color: #fff;
             min-height: calc(100vh - 74px);
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        
+        .hero-content {
+            padding: 20px 0; /* Reduced vertical padding */
+        }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 60px;
             color: #000;
             margin-bottom: 0;
-            line-height: 1.2;
+            line-height: 1.1;
         }
         
         .hero h1 .subtitle {
-            font-size: 3rem;
+            font-size: 58px;
             color: #666;
+            display: block;
+        }
+        
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 15px;
+            font-style: italic;
         }
 
         .hero .hero-description {
@@ -475,7 +492,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         
         .tech-card:hover {
@@ -491,6 +508,12 @@
         .tech-card h3 {
             font-size: 1.1rem;
             color: #000;
+            margin-bottom: 5px;
+        }
+
+        .tech-card p {
+            font-size: 0.9rem;
+            color: #666;
         }
 
 
@@ -735,29 +758,38 @@
             display: none;
             text-align: center;
             padding: 40px 20px;
+            font-size: 20px;
         }
         
         /* Form animations */
+        #form-container {
+            position: relative;
+        }
+
         .confetti {
             position: absolute;
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             background: gold;
-            top: 50%;
-            left: 50%;
             border-radius: 50%;
             opacity: 0;
             pointer-events: none;
-            animation: pop 0.8s forwards;
+            animation: pop 1.2s forwards;
         }
 
         @keyframes pop {
-            0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
-            100% { transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1); opacity: 0; }
+            0% { 
+                transform: translate(var(--start-x), var(--start-y)) scale(0.5); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: translate(var(--end-x), var(--end-y)) scale(1); 
+                opacity: 0; 
+            }
         }
 
         .flip-out { animation: flipOut 0.6s forwards; }
-        .flip-in { animation: flipIn 0.6s forwards; display: block !important; }
+        .flip-in { animation: flipIn 0.6s 0.1s forwards; } /* Added delay */
 
         @keyframes flipOut {
             from { transform: rotateY(0deg); opacity: 1; }
@@ -778,10 +810,9 @@
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
-            align-items: center;
         }
         
         .footer-about h3 {
@@ -794,23 +825,70 @@
             font-size: 0.9rem;
         }
         
+        .footer-links h4 {
+             font-size: 1.1rem;
+             margin-bottom: 15px;
+             color: #fff;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+        }
+        
+        .footer-social {
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .footer-social img:hover {
+            opacity: 1;
+        }
+        
         .footer-bottom {
             border-top: 1px solid #333;
             padding-top: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             font-size: 0.9rem;
             color: #9ca3af;
         }
         
-        .social-links img {
-            width: 36px;
-            height: 36px;
-            margin: 0 8px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+        .footer-bottom-links a {
+             color: #9ca3af;
+             text-decoration: none;
+             margin: 0 10px;
+             transition: color 0.3s;
         }
-        .social-links img:hover {
-            opacity: 1;
+        
+        .footer-bottom-links a:hover {
+            color: #fff;
         }
 
         /* --- Scroll to Top Button --- */
@@ -825,9 +903,10 @@
             background-color: #000;
             color: white;
             cursor: pointer;
-            padding: 15px;
+            padding: 10px 15px;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 14px;
+            font-weight: 600;
             opacity: 0.7;
             transition: opacity 0.3s;
         }
@@ -839,15 +918,16 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 992px) {
-             .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .ai-grid {
+             .contact-grid, .ai-grid {
                 grid-template-columns: 1fr;
             }
         }
         
         @media (max-width: 768px) {
+             .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -890,11 +970,15 @@
                 transform: translateY(-8px) rotate(-45deg);
             }
 
-            .hero h1 { font-size: 2.5rem; }
-            .hero h1 .subtitle { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero h1 .subtitle { font-size: 2.5rem; }
             .about-grid { grid-template-columns: 1fr; }
             .form-row { flex-direction: column; gap: 12px; }
             .form-group { width: 100%; }
+             .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -921,8 +1005,9 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero full-bleed">
-        <div class="container">
-            <h1>AI Solutions <br><span class="subtitle">for the European Market</span></h1>
+        <div class="hero-content">
+            <h1>AI Solutions <span class="subtitle">for the European Market</span></h1>
+            <p class="tagline">Engineered in the EU, Innovating for Europe.</p>
             <p class="hero-description">Trinexus Technologies develops cutting-edge artificial intelligence products that empower businesses across the EU. We build the future, one intelligent solution at a time.</p>
             <div class="hero-tags">
                 <span>🧑‍💻 Machine Learning</span>
@@ -1193,34 +1278,42 @@
                     <div class="tech-card">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4IDIzMi42YTEwNCAxMDQgMCAxIDAgMC0yMDggMTA0IDEwNCAwIDAgMCAwIDIwOFptNzEuMS0xNTguM2ExMiAxMiAwIDAgMS0xLjcgMTZsLTM0LjcgNjEuNmE4IDggMCAwIDEtNy4yIDRsLTI3LjItNC42YTYgNiAwIDAgMC02IDUuM2w0LjMgMjUuOGE2IDYgMCAwIDEwIDUuNGwxNC4yIDIuNGE2IDYgMCAwIDEgNSA3LjFsLTcuNyA0NC4yYTggOCAwIDAgMS03LjcgNS43SDk3LjZhOCA4IDAgMCAxLTcuNy01LjdsLTcuNy00NC4yYTYgNiAwIDAgMSA1LTcuMWwxNC4yLTIuNGE2IDYgMCAwIDEgNi01LjRsNC4zLTI1LjhhNiA2IDAgMCAwLTYtNS4zbC0yNy4yIDQuNmE4IDggMCAwIDEtNy4yLTRsLTM0LjctNjEuNmExMiAxMiAwIDAgMSAxNC4zLTIwLjJsMzQuNyA2MS41YTggOCAwIDAgMSAuMiAxMGw1MS41IDguNmE2IDYgMCAwIDAgNS41LTUuNmwtOC42LTUxLjhhNiA2IDAgMCAxIDUuNS02LjVsMzQuNy01LjlhMTIgMTIgMCAwIDEgMTYgMS43Wm0tNzEuMSAxMjUuOWExMiAxMiAwIDEgMSAxMi0xMiAxMiAxMiAwIDAgMS0xMiAxMloiLz48L3N2Zz4=" alt="Mistral AI Logo"/>
                         <h3>Mistral AI</h3>
+                        <p>Advanced, open-source large language models from Europe.</p>
                     </div>
                      <div class="tech-card">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
                         <h3>Hugging Face</h3>
+                        <p>The leading platform for open-source models and datasets.</p>
                     </div>
                     <div class="tech-card">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTY5LjMsNjZDMjAwLjQsNjYsMjI2LDQxLjcsMjI2LDEwLjZDMjI2LC0yMC40LDIwMC40LDAsMTY5LjMsMFMtNDQuNy0yMS4zLTQ0LjctNTIuNGMwLDI3LjYsMTYuMiw1Mi40LDQ0LjcsNTIuNG0tODIuNiwwQzEyMCw2NiwxNDUuNiw0MS43LDE0NS42LDEwLjZDMTQ1LjYsLTIwLjQsMTIwLDAsODYuNywwUzQyLC0yMS4zLDQyLC01Mi40YzAsMjcuNiwxNi4yLDUyLjQsNDIsNTIuNG0tNDIsODYuN0MyOC41LDE1Mi43LDAsMTgxLDAsMjEzLjFjMCwzMS4xLDI4LjUsNTIuNCw1OS42LDUyLjRzNTkuNi0yMS4zLDU5LjYtNTIuNGMwLTI3LjYtMTYuMi01Mi40LTQzLjgtNTIuNEg1OS42di0uMW0xMTEuNCwwYy0yNy42LDAtNDMuOCwyNC44LTQzLjgsNTIuNGMwLDMxLjEsMjguNSw1Mi40LDU5LjYsNTIuNHM1OS42LTIxLjMsNTkuNi01Mi40YzAtMzIuMS0yOC41LTU4LjQtNTkuNi01OC40WiIvPjwvc3ZnPg==" alt="Python Logo"/>
                         <h3>Python</h3>
+                         <p>The core language for AI development and data science.</p>
                     </div>
                     <div class="tech-card">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjI0LjMsOTEuNmMzLjEsNS4xLDUuMiwxMS41LDUuMiwxOC45VjI0MGMwLDEyLjctMTIuNSwyMC4zLTI0LDE0LjFsLTIuMS0xLjJsLTM1LjMtMjAuNGMwLDAsMCwwLDAsMGwtLjEtLjFMMTQ4LDIyM2wtMzUuMy0yMC40Yy0xMS41LTYuMi0yNC0xMy4zLTI0LTE0LjF2LTc1YzAtNy40LDIuMS0xMy44LDUuMi0xOC45bDM1LjItMjAuM0w2NC4xLDM4LjhsMzUuMywyMC40YzUuMSwzLjEsMTEuNSw1LjIsMTguOSw1LjJoNzQuOWM3LjQsMCwxMy44LTIuMSwxOC45LTUuMmwxNy42LTEwLjIgMTcuNywxMC4yWm0tNjAuOCw3Ny44bDI4LjIsMTYuM3YtMzIuNWwtMjguMiwxNi4yWm0tOTYtNTUuNWwyOC4yLDE2LjJMMzIsMTQ2LjRWMTIwbDI4LjIsMTYuM1ptMzIuNS01MS4zTCw1NS42LDQxLjRsLTIuOCwxLjZDNTEsNDQsNDgsNDYuMyw0OCw1MC4ydjE1NWwzNS4yLTIwLjQtLjEtLjEgMzUuMi0yMC4zbDM1LjIsMjAuMywzNS4yLTIwLjR2LTIuOGMwLDAsLjEtLjEsMC0uMWwtMzUuMy0yMC40Yy01LjEtMy4xLTExLjUtNS4yLTE4LjktNS4ySDk3LjljLTcuNCwwLTEzLjgsMi4xLTE4LjksNS4yWm0xNDQuMyw5NS4ybC0yLjgsMS42Yy0xLjYsLjkxMy0zLjEsMi40MDUtNC4xLDRsLTI4LjMsMTYuM3YzMi41bDI4LjItMTYuM2wxNC4xLTguMiwyLjgtMS42YzEuMS0uNiwxLjYtMS42LDEuNi0yLjR2LTEzLjhsLTExLjYtNi43WiIvPjwvc3ZnPg==" alt="TensorFlow Logo"/>
                         <h3>TensorFlow</h3>
+                        <p>Google's framework for large-scale machine learning.</p>
                     </div>
                     <div class="tech-card">
                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4LDMyYTYsNiAwIDAsMC02LDZ2MTc2YTYsNiAwIDAsMCAxMiwwdjE3LjZhODAsODAgMCAxLDAtLjEtMTYwLjFWODBhODAsODAgMCAwLDAsMCwxMDguMnYtNDguOGE2LDYgMCAwLDAtMTItLjFaTTU2LDEyOGE3Miw3MiAwIDEsMSA3Miw3MkE3Miw3MiAwIDAsMSA1NiwyMDhaIi8+PC9zdmc+" alt="PyTorch Logo"/>
                         <h3>PyTorch</h3>
+                        <p>A flexible deep learning framework for research and production.</p>
                     </div>
                     <div class="tech-card">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjE3LjQsMjE3LjQtMTQuMSwxNC4xYy0yMy4xLDIzLjEtNjAuNiwyMy4xLTgzLjcsMGwtMjQuNC0yNC40Yy0yMy4xLTIzLjEtMjMuMS02MC42LDAtODMuN2wxNC4xLTE0LjFMMzguNiw5NEw5NCwzOC42bDE0LjEtMTQuMWMxMS41LTExLjUsMjYuNy0xNy4zLDQxLjgtMTcuM3M0LjIsMCA4LjMsLjVMMTMzLjYsMjJjLTMuOC0xLjItNy44LTEuOC0xMS44LTEuOHMtMjMuMSw3LjgtMzIuOCwxNy41TDM4LjYsOTRjLTIzLjEsMjMuMS0yMy4xLDYwLjYsMCw4My43bDguMyw4LjNMMzguNiwxOTQuM2wxMy42LTEyLjVjLTYuMi0xMS05LjgtMjMuNy05LjgtMzcuMnMwLDAsMCwwYzAtMjMuMSw3LjgtNDQuNSwxNy42LTY0LjNsODIuMy04Mi4zYzExLjUtMTEuNSwyNi43LTE3LjMsNDEuOC0xNy4zczMwLjIsNS44LDQxLjgsMTcuM2MxMS41LDExLjUsMTcuMywyNi43LDE3LjMsNDEuOFMxOTYuMywxMjQuOCwxODQuOCwxMzYuM0w5NCwzOC42bC04LjMsOC4zTDg1LjcsMzguNmwtOC4zLDguMyA4LjMsOC4zTDgxLjQsNDYuOGw3My41LDczLjVjLTIwLjIsOS44LTQxLjIsMTcuNi02NC40LDE3LjZzLTM3LjItMy41LTY0LjQtOS44bDEzLjYtMTIuNUwzOC42LDEyOC41bC41LjlMMzguNiwxNDBsMTQuMS0xNC4xYzIzLjEtMjMuMSw2MC42LTIzLjEsODMuNywwbDI0LjQsMjQuNGMyMy4xLDIzLjEsMjMuMSw2MC42LDAsODMuN1ptLTY0LjQtNDguMWwtMjQuNC0yNC40Yy0xMS41LTExLjUtMzAuMi0xMS41LTQxLjgsMHMtMTEuNSwzMC4yLDAsNDEuOGwyNC40LDI0LjRjMTEuNSwxMS41LDMwLjIsMTEuNSw0MS44LDBzMTEuNS0zMC4yLDAtNDEuOFoiLz48L3N2Zz4=" alt="Kubernetes Logo"/>
                         <h3>Kubernetes</h3>
+                        <p>For automated deployment and scaling of applications.</p>
                     </div>
                     <div class="tech-card">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjQxLjgsOTYuNmwtMjYuNS00NGMtMTAuNS0xNy40LTI4LjktMjcuOS00OS0yNy45aC03NmMtMjAuMSwwLTM4LjUsMTAuNS00OSwyNy45TDE0LjIsOTYuNmMtMTAuNSwxNy40LTE0LjYsMzguNS0xMS4xLDYwLjFsOS42LDU4LjZjNS43LDM0LjksMzYuNSw2Mi4xLDczLjUsNjIuMWg3My45YzM3LDAsNjcuOC0yNy4yLDczLjUtNjIuMWw5LjYtNTguNmMzLjYtMjEuNi0uNi00Mi43LTExLjEtNjAuMVptLTM1LDg3LjljLTMuNywyMi4xLTIzLjQsMzkuMi00Ni42LDM5LjJIMTk2YzAsMCwwLDAsMCwwSDk5LjdjLTIzLjIsMC00Mi44LTE3LjEtNDYuNi0zOS4ybC03LjgtNDcuMWgxNzAuM2wtNy44LDQ3LjFabS0uMy02MS42SDUwLjVsMTUtMjQuOWM4LjItMTMuNSwyMi4xLTIxLjksMzctMjEuOWg3NmMxNC44LDAsMjguOCw4LjQsMzcsMjEuOWwxNSwyNC45Wm0tMTE2LjQtNDIuM2gtMTYuMXYxMC43aDE2LjF2LTEwLjdabTM0LjIsMGgtMTYuMXYxMC43aDE2LjF2LTEwLjdaIi8+PC9zdmc+" alt="Docker Logo"/>
                         <h3>Docker</h3>
+                        <p>Containerization for consistent development environments.</p>
                     </div>
                     <div class="tech-card">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjI4LjgsMTQxLjZsLTMzLjItNDEuMWMtMTEtMTMuNi0yMC4xLTIwLjItMjcuMS0xMi41bC0yMS40LDIzLjRsLTIwLjYtMjAuNmMtOC4xLTguMS0xMy4xLTEwLjgtMTUuNS05LjJsLTI1LjIsMjcuNmwtNDUuNC00NS40Yy02LjYtNi42LTE3LjQtNi42LTI0LDBsLTE2LjQsMTYuNGMtNi42LDYuNi02LjYsMTcuNCwwLDI0bDU3LjMsNTcuM2MtMTEsNC45LTE5LjIsMTIuOC0yMy45LDIyLjNsLTcuOC03LjhjLTYuNi02LjYtMTcuNC02LjYtMjQsMGwtMTYuNCwxNi40Yy02LjYsNi42LTYuNiwxNy40LDAsMjRsNTcuMyw1Ny4zYzYuNiw2LjYsMTcuNCw2LjYsMjQsMGwxMy4xLTEzLjFjOS4zLDcuNCwyMC4yLDEyLjQsMzIuMSwxNC40bDE4LjUsMTguNWM2LjYsNi42LDE3LjQsNi42LDI0LDBsMzYuMy0zNi4zYzYuNi02LjYsNi42LTE3LjQsMC0yNGwtMTcuMS0xNy4xYzEzLjYtMTEsMjIuMy0yNS45LDI0LjMtNDMuM2MxLjQtMTEuOC0xLjktMjQuMy04LjYtMzQuOVptLTEwLjEsMjEuM2MtMS44LDEzLjYtOC4xLDI1LjYtMTguMywzNC4ybDE3LjEsMTcuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdsLTM2LjMsMzYuM2MtMS42LDEuNi00LjEsMS42LTUuNywwbC0xOC41LTE4LjVjLTguOC0xLjMtMTctMy45LTI0LjYtNy42bDMuMywzLjNjMS42LDEuNiwxLjYsNC4xLDAsNS43bC0xMy4xLDEzLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtNTcuMy01Ny4zYy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw3LjgsNy44Yy42LS42LDEuMS0xLjMsMS43LTIuMWwzLjUtNC43YzEuMy0xLjcsMS45LTMuOCwxLjUtNS44bC0yLjUtOS4yTDkyLjQsODguMWwxMy42LDEzLjZjMS42LDEuNiw0LjEsMS42LDUuNywwbDIwLjYtMjAuNmMxLjYtMS42LDEuNi00LjEsMC01LjdsLTIwLjYtMjAuNmMtMS42LTEuNi00LjEtMS42LTUuNywwTDM3LjUsMTYxLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtMTYuNC0xNi40Yy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw0NS40LDQ1LjRjMS42LDEuNiw0LjEsMS42LDUuNywwbDI1LjItMjcuNmMxLjYtMS42LDQuMS0xLjYsNS43LDBsMjAuNiwyMC42YzEuNiwxLjYsNC4xLDEuNiw1LjcsMGwyMS40LTIzLjRjMS42LTEuNiw0LjEtMS42LDUuNywwbDMzLjIsNDEuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdaIi8+PC9zdmc+" alt="AWS Logo"/>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjI4LjgsMTQxLjZsLTMzLjItNDEuMWMtMTEtMTMuNi0yMC4xLTIwLjItMjcuMS0xMi41bC0yMS40LDIzLjRsLTIwLjYtMjAuNmMtOC4xLTguMS0xMy4xLTEwLjgtMTUuNS05LjJsLTI1LjIsMjcuNmwtNDUuNC00NS40Yy02LjYtNi42LTE3LjQtNi42LTI0LDBsLTE2LjQsMTYuNGMtNi42LDYuNi02LjYsMTcuNCwwLDI0bDU3LjMsNTcuM2MtMTEsNC45LTE5LjIsMTIuOC0yMy45LDIyLjNsLTcuOC03LjhjLTYuNi02LjYtMTcuNC02LjYtMjQsMGwtMTYuNCwxNi40Yy02LjYsNi42LTYuNiwxNy40LDAsMjRsNTcuMyw1Ty4zYzYuNiw2LjYsMTcuNCw2LjYsMjQsMGwxMy4xLTEzLjFjOS4zLDcuNCwyMC4yLDEyLjQsMzIuMSwxNC40bDE4LjUsMTguNWM2LjYsNi42LDE3LjQsNi42LDI0LDBsMzYuMy0zNi4zYzYuNi02LjYsNi42LTE3LjQsMC0yNGwtMTcuMS0xNy4xYzEzLjYtMTEsMjIuMy0yNS45LDI0LjMtNDMuM2MxLjQtMTEuOC0xLjktMjQuMy04LjYtMzQuOVptLTEwLjEsMjEuM2MtMS44LDEzLjYtOC4xLDI1LjYtMTguMywzNC4ybDE3LjEsMTcuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdsLTM2LjMsMzYuM2MtMS42LDEuNi00LjEsMS42LTUuNywwbC0xOC41LTE4LjVjLTguOC0xLjMtMTctMy45LTI0LjYtNy42bDMuMywzLjNjMS42LDEuNiwxLjYsNC4xLDAsNS43bC0xMy4xLDEzLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtNTcuMy01Ny4zYy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw3LjgsNy44Yy42LS42LDEuMS0xLjMsMS43LTIuMWwzLjUtNC43YzEuMy0xLjcsMS45LTMuOCwxLjUtNS44bC0yLjUtOS4yTDkyLjQsODguMWwxMy42LDEzLjZjMS42LDEuNiw0LjEsMS42LDUuNywwbDIwLjYtMjAuNmMxLjYtMS42LDEuNi00LjEsMC01LjdsLTIwLjYtMjAuNmMtMS42LTEuNi00LjEtMS42LTUuNywwTDM3LjUsMTYxLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtMTYuNC0xNi40Yy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw0NS40LDQ1LjRjMS42LDEuNiw0LjEsMS42LDUuNywwbDI1LjItMjcuNmMxLjYtMS42LDQuMS0xLjYsNS43LDBsMjAuNiwyMC42YzEuNiwxLjYsNC4xLDEuNiw1LjcsMGwyMS40LTIzLjRjMS42LTEuNiw0LjEtMS42LDUuNywwbDMzLjIsNDEuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdaIi8+PC9zdmc+" alt="AWS Logo"/>
                         <h3>Cloud Platforms</h3>
+                        <p>Leveraging AWS and Azure for scalable cloud infrastructure.</p>
                     </div>
                 </div>
             </div>
@@ -1269,7 +1362,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="full-bleed">
-            <div class="container">
+            <div class="container" id="form-container">
                 <div class="section-header">
                      <h1>Get Started <span>With AI</span></h1>
                 </div>
@@ -1280,17 +1373,17 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="full-name">Full Name *</label>
-                                    <input type="text" id="full-name" name="Full Name" required placeholder="Your Name" autocomplete="off">
+                                    <input type="text" id="full-name" name="Full Name" required placeholder="Your Name" autocomplete="new-password">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Business Email *</label>
-                                    <input type="email" id="email" name="Business Email" required placeholder="name@company.com" autocomplete="off">
+                                    <input type="email" id="email" name="Business Email" required placeholder="name@company.com" autocomplete="new-password">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="company">Company Name *</label>
-                                    <input type="text" id="company" name="Company Name" required placeholder="Your Company" autocomplete="off">
+                                    <input type="text" id="company" name="Company Name" required placeholder="Your Company" autocomplete="new-password">
                                 </div>
                                 <div class="form-group">
                                     <label for="industry">Industry</label>
@@ -1372,25 +1465,47 @@
                  <div class="footer-about">
                     <h3>Trinexus Technologies</h3>
                     <p>Leading EU-focused AI technology company creating intelligent solutions that transform businesses across Europe.</p>
-                     <br>
-                    <p>hello@trinexustechnologies.com</p>
-                    <p>Munich | Budapest</p>
+                    <div class="footer-social">
+                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSwzSDVDMy44OTUsMywzLDMuODk1LDMsNVYxOWMwLDEuMTA1LDAuODk1LDIsMiwyaDE0YzEuMTA1LDAsMi0wLjg5NSwyLTJWNUMyMSwzLjg5NSwyMC4xMDUsMywxOSwzeiBNOCwxN0g2VjExaDJWNzd6IE03LDkuOGMtMC45NjcsMC0xLjc1LTAuNzg0LTEuNzUtMS43NWMwLTAuOTY2LDAuNzgzLTEuNzUsMS43NS0xLjc1YzAuOTY2LDAsMS43NSwwLjc4NCwxLjc1LDEuNzVDOC43NSw5LjAxNiw3Ljk2Nyw5LjgsNyw5Ljh6IE0xOCwxN2gtMnYtMi44M2MwLTAuNjczLTAuMDEyLTEuNTM5LTAuOTM3LTEuNTM5Yy0wLjkzNywwLTEuMDgxLDAuNzMyLTEuMDgxLDEuNDg5VjE3aC0yVjExaDEuOTE5djAuODgyaDAuMDI3YzAuMjctMC41MTIsMC45My0xLjAzMSwyLjA3Ny0xLjAzMWMxLjU5LDAsMi45NzksMS4wNDMsMi45NzksMy40OTNWMTd6Ii8+PC9zdmc+" alt="LinkedIn"></a>
+                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwwQzUuMzczLDAsMCw1LjM3MywwLDEyczUuMzczLDEyLDEyLDEyYzYuNjI3LDAsMTItNS4zNzMsMTItMTJTMTguNjI3LDAsMTIsMHogTTExLjY0MywxNy40MDljLTAuNTcyLDAuMzI0LTEuMjU0LDAuNTAzLTEuOTY1LDAuNTAzYy0yLjA5OCwwLTMuOTU2LTEuNzAzLTQuMTI0LTMuNzgzSDguNjY3di0yLjE0M0g1LjQ1M2MwLjA2OC0zLjEwOCwyLjY5MS01LjYyNSw1Ljc5OS01LjYyNWMwLjk5NywwLDEuOTMzLDAuMzk4LDIuNjI0LDEuMTA5TDE1LjI1NSwyLjE4YzAuMDYyLTAuMDA4LDAuMTI1LTAuMDE1LDAuMTg4LTAuMDE1YzAuMTM0LDAsMC4yNjUsMC4wMjEsMC4zOTIsMC4wNjJMMTMuNjQ0LDYuNTljLTAuNDA1LTAuMjIxLTAuODQ2LTAuMzM0LTEuMjk5LTAuMzM0Yy0yLjA1MywwLTMuNzIsMS42NjYtMy43MiwzLjcyYzAsMC40MzIsMC4wNzYsMC44NDcsMC4yMTcsMS4yNDFsNC43ODMtMy4zNDJsMS4zODMsMi4xNDNMMTAuNTE4LDEzLjFsMi41NjEsMS41NTVMMTEuNjQzLDE3LjQwOXogTTE2LjcxNSwxNC43MDNjLTAuMjA5LDAuOTYzLTAuNTEzLDEuODY0LTAuOTMyLDIuNjQ2bC0xLjQwMy0yLjI5MWwyLjA5NSwxLjQ2N0MxNi41NTQsMTYuNjA0LDE2LjYyMywxNS42NTYsMTYuNzE1LDE0LjcwM3ogTTE4LjM2Nyw5LjY4NGMtMC4xNTQsMS4wNjMtMC40MzYsMi4wNzItMC44MTcsMy4wMDlsLTIuMjQ2LTEuNTU2bDIuOTMyLDEuNTc4QzE4LjM0MywxMS42NDIsMTguNDEzLDEwLjY4MiwxOC4zNjcsOS42ODR6Ii8+PC9zdmc+" alt="Instagram"></a>
+                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwzQTEsMSwwLDAsMCwxMC44OSwzLjIzTDIuMjMsOS43MkExLDEsMCwwLDAsMiwxMC42MlYyMGExLDEsMCwwLDAsMSwxSDIxYTEsMSwwLDAsMCwxLTFWMTAuNjJhMSwxLDAsMCwwLS4yMy0uNjFsLTguNjYtNi40OEExLDEsMCwwLDAsMTIsM1ptOCwySDExLjg0TDE5LDEwLjA3Wk00LDExLjE5bDcuMTEtNS4zNEwxOC4yMSwxMS4xOUEzLDI5LDMsMjksMCwwLDEsMTEuNjYsMTNBMi42NywyLjY3LDAsMCwxLDQsMTEuMTlabTAsNi4yNVYxMi4zMWExLDEsMCwwLDAsLjQyLjMzbDcuMDgsNS4zYTEsMSwwLDAsMCwxLDBsNy4wOC01LjNhMSwxLDAsMCwwLC40Mi0uMzFWMTcuNDRhMy40NywzLjQ3LDAsMCwxLTIuNTgsMi41Nkg2LjU4QTMuNDcsMy40NywwLDAsMSw0LDE3LjQ0WiIvPjwvc3ZnPg==" alt="GitHub"></a>
+                    </div>
                 </div>
-                <div class="social-links" style="text-align: right;">
-                    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJRSURBVHgB7ZfRddswEEDfBDIJSARKCVQmdIOwgdgEcgmpBOgI7BCcIbgEdgg7AaQS0AnYVRxZkjh2/EpIgpD4B3x+d2Z3dnd3AE3TBGACEA/iUfIG8Yg0b+L1iNu5bY7sESFADKBIvsSbwzrwI045s6yIhkQgvA4nSr6A7Z/AG3ADnEGkM4FPAXAcTpH8P2z+Am7AR1wz9gI8BFDkL8AP5r8u+RHwAMDIH8dPM4xPBQ8A/Iv8L3iA/EfgT+Q/we/IF2N+Bf4//n+Db5Gf1f/B/0/8P/5H/i8+T/4I/gcE4mJ8Bv5G4Kk/gT8A9A/iOYn/lM/iM5L/AZ/FZyT+F38tPi/xn+Lz4n/gI/ER/SeAP0r+T4K/lfwfBT+P/0fBvxT/5/gf4j8U/2f4D8V/HP8T/G/xP8n/FP8T/G/wf+R/g/8T/A/4f+C/xf87/N/x/8b/G/43+D/x/8D/FfyP8H/C/wX+f+DfBf5P4N8E/gfgXwT+B/Cvgf8A/CvgrwB/DPgrwB+Bvx74E8BfCfwbwJ8A/EXgbwB+BfBXAj8H+BHgTwB+AvgDwB8DfgDwR4A/BvwE4CcAfx3wF4A/Cfh3gN8B/CXgrwD+DfAXgX8D+BfA/wL8p8D/BP4p8D+B/xT4n8B/CvwnwD8G/GfgzwB/DPgz4J8B/wnwT4D/BPhnwl8Z+GfgLwB/CfhLwJ8C/iLwJ4C/BPyLwJ8B/hrw14G/Bvxr4D8D/hPw/wH/f+D/Bf7/wP8H/l/g/wn+X+D/Cf5P8H8S/B+A/xH8D8B/BP8E8E+Cvwn8KeCfgX8G/CvgXwB+AfAPgD8C/ADgDwA/AvwA4A8APwz4A8AvAJ8A+ATABwA+AfABgE8A3AC4AcANgBsAbgDcALgBYAbADBCTmG8AjwB+BPAnAT8H+CPA3wD8NeAvgf8D/M/APxv4h8G/BPyf4L8A/zPwD4N/Cvg/wf+B/xP8T/A/wf8E/xP8T/A/Bf8j+J/gfwr/U/if4v8K/5v4b2D+X/Df4D8n+M/wP8V/if9P/Nfg/x3+Z/i/wn+P/wf+b/i/wP8P/o/w/8H/G/wf4P+N/xf83+P/Hf5v8H/D/xv8/+H/F/w/w/8L/v/h/y/4b/D/jv8n+D/C/yH+H/if4H/I/wP8T/h/gD8B/wP+B/wf+D/g/wL/Z/i/gf8f/H/g/wT/f+D/DP/v+H+D/zn+n+P/Df/P8H/L/x3+7/jf8v/B/w3/L/yf8L/E/wX+7/h/w/8t/n/hf8r/M/wf8P/M/xf4v+V/zf4v+f+H/C/0v+L/l/5b/L/x/8r/A/4P+D/x/4P8U/6v4P+L/iv+D/g/4P+H/gP/b/J/g/5b/H/z/gf8P/u/5P8H/E/6v+L/m/x/+b/l/53/J/xP+3/n/jv8P/j/5/x3/b/j/gP83/78fAIfn/x+JAAAAAElFTkSuQmCC" alt="LinkedIn"></a>
-                    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJTSURBVHgB7ZftcdsAEIB/Ak4QdQIxCbBB2ATuCcoEIgncJLAg7gRSCTgE5wRKEncC7IpjS1qgRjX2mQy58+Ff8r23e2/3bhdAU1PDbABiAs8Sb+BN4k0iTd4sXmK+1/FcxzNCgBBAkT9x0bAOfI9TTmxriI5EIMwvqUj8i+2fwhv4GZiC0I+AbwDAvUj8/bP5FZiBE9B6AXwCgCQ+AP9k/k7yY+AFgJG/ij8jjk8GDwC8ifxv8ADxH4E/kv8HvyNfjPkd+P+J/w9+R/5b/Q/+T/x/+A/xf8f/lf9D/xGdSExC4C/k9wae/g38C6D/Ac1K/Jd+I7sp8Z/gT+KTkv8Vvyc+L/Kf4vfiI/gT8D/g/5T8vwT/Z/k/C/4t/T8K/kXxP8X/CP4n+D/B/yH+5/if4H+M/xn+Z/hf4X+K/xH+1/if43+F/wH+t/h/wP8F/lf4X+J/gf9L/F/ifwn+J/gvgn8G/APwH4I/APwD8E8AfxL4E8C/Dfx54M8Bfxr4s8BfC/wXwL8A/CLwLwB/DPgrgX8N+CvAXw/+DPBPBP8c8EeAPwb8J+BvA38B+FvAXwb+HvB3gL8O/B3gnwC/APx34B8B/iXwH4B/EfgHwD8D/xH4B8B/DP5H4A+Afxn8x+Afgf8y+E/APwP/GfiPwH8A/iXwj4B/DfhLwD8H/wP4XwT/I/g/Av8E8C8A/wTwrwL/Efgvgf8R+FeAfxX4V4B/AfBXgX8L/CvgvwB/HfgXgL8G/GvA3wa+AfAfgf8c+FeAPwf8ReB/CPxX4F8C/gLwbwD/DfCXgH8H+CvA3wR+Avg/AvwB4DcAfwLwBYBPAHwD4BMAHwD4AMAnADcAbgC4AcANADcA3AAwA8AMMDYBbwCPAK5L/D+DvA38DeDPAH8j8B8D/3Hwfwa+Y/BvgL9T8G/gLwX/p+A/AP888GfgnwL/c/Dvgf8V/Ffwn4L/Ffwn4b8c/Cf4v8N/hf+v4P+A/4f4v+N/xv+J/if53+T/kvw3+r/jf8r/H/53+L/nf9f/P/xH/P/l/8/8P/kf8//J/5v/L/zv+3/B/8/8P/tfwn+J/gv+b/H/hv+T/L/nvwf/H/lf83+F/0v+3/l/y/89/3/8/+X/iP+3/n/y/xf/L/kf8b/l/w3+r/hv5f+D/wP+H/jv+D/g/wP/d/h/w/+Z/w/8H/H/gP+L/7/1/4MAVOf/H1sV1QAAAAAASUVORK5CYII=" alt="GitHub"></a>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Our Solutions</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-links">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="mailto:careers@trinexus.eu">Careers @ Trinexus</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2024 Trinexus Technologies. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Imprint</a> |
+                    <a href="#">Cookie Policy</a> |
+                    <a href="#">Terms & Conditions</a>
+                </div>
             </div>
         </div>
     </footer>
     
-    <button id="scrollToTopBtn" title="Go to top">↑</button>
+    <button id="scrollToTopBtn" title="Back to top">Back to Top</button>
 
     <script>
         const form = document.getElementById('aiForm');
+        const formContainer = document.getElementById('form-container');
         const formWrapper = document.querySelector('.contact-form-wrapper');
         const confirmation = document.getElementById('confirmationMessage');
         const hamburger = document.querySelector(".hamburger");
@@ -1411,31 +1526,40 @@
         }));
         
         // --- Form Submission Animation ---
-        function createConfetti() {
-            for (let i = 0; i < 25; i++) {
+        function createConfetti(container) {
+            const containerRect = container.getBoundingClientRect();
+            for (let i = 0; i < 50; i++) {
                 const confetti = document.createElement('div');
                 confetti.classList.add('confetti');
-                confetti.style.setProperty('--x', (Math.random() * 200 - 100) + 'px');
-                confetti.style.setProperty('--y', (Math.random() * -150 - 50) + 'px');
+                
+                const startX = Math.random() * submitButton.offsetWidth;
+                const startY = Math.random() * submitButton.offsetHeight;
+
+                // Position relative to the container
+                const endX = Math.random() * containerRect.width - (submitButton.offsetLeft + startX);
+                const endY = Math.random() * containerRect.height - (submitButton.offsetTop + startY);
+                
+                confetti.style.setProperty('--start-x', `${startX}px`);
+                confetti.style.setProperty('--start-y', `${startY}px`);
+                confetti.style.setProperty('--end-x', `${endX}px`);
+                confetti.style.setProperty('--end-y', `${endY}px`);
+
                 confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
                 submitButton.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 800);
+                setTimeout(() => confetti.remove(), 1200);
             }
         }
         
         form.addEventListener('submit', function (e) {
             e.preventDefault(); 
-            createConfetti();
+            createConfetti(formContainer);
             
-            // Start the flip animation
             form.classList.add('flip-out');
             
-            // After the form flips out, hide it and flip in the confirmation
             setTimeout(() => {
                 form.style.display = 'none';
                 confirmation.style.display = 'block';
                 confirmation.classList.add('flip-in');
-                 // Match wrapper height to confirmation message height
                 formWrapper.style.height = confirmation.offsetHeight + 'px';
             }, 600);
         });
@@ -1458,6 +1582,4 @@
     </script>
 </body>
 </html>
-
-
 
