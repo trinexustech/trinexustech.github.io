@@ -25,11 +25,11 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            font-size: 15px;
+            font-size: 16px; /* Base font size */
         }
         
         p {
-            font-size: 15px;
+            font-size: 1.1rem; /* Consistent subtext size (17.6px) */
             color: #666;
         }
 
@@ -156,7 +156,7 @@
         }
         
         .section-header h1 {
-            font-size: 40px;
+            font-size: 50px;
             color: #000;
             margin-bottom: 8px;
         }
@@ -164,12 +164,10 @@
         .section-header h1 span {
             color: #666;
             display: block;
-            font-size: 40px;
+            font-size: 50px;
         }
 
-        .section-header p {
-            font-size: 15px;
-            color: #666;
+        .section-header > p {
             max-width: 700px;
             margin: 0 auto;
         }
@@ -211,7 +209,7 @@
         }
 
         .hero .hero-description {
-            font-size: 1.2rem;
+            font-size: 1.2rem; /* Kept slightly larger for emphasis */
             color: #555;
             max-width: 600px;
             margin: 20px auto 30px;
@@ -317,7 +315,7 @@
         }
 
         .card-header p {
-            font-size: 14px;
+            font-size: 15px;
             color: #4B5563;
             line-height: 1.4;
             margin-bottom: 6px;
@@ -443,6 +441,8 @@
             flex-direction: column;
             gap: 8px;
         }
+        
+        .ai-card-content p { font-size: 15px; }
 
         .ai-title {
             font-size: 18px;
@@ -456,6 +456,7 @@
 
         .ai-key-results li {
             margin-bottom: 6px;
+            font-size: 15px;
         }
 
         .ai-card-footer {
@@ -519,7 +520,6 @@
 
         .tech-card p {
             font-size: 14px;
-            color: #666;
         }
 
 
@@ -583,7 +583,7 @@
         .value-item {
             position: relative;
             padding-left: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .value-item::before {
@@ -600,11 +600,13 @@
         .value-item strong {
             display: block;
             color: #000;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
         }
         
-        .value-item span {
-            font-size: 15px;
-            color: #666;
+        .value-item span, .about-card p {
+           font-size: 1.1rem;
+           color: #666;
         }
 
         /* --- Contact Section --- */
@@ -692,6 +694,10 @@
          .contact-info-card.dark ul li {
             align-items: flex-start;
          }
+        
+        .contact-info-card.dark p {
+            color: #ddd;
+        }
 
         .contact-info-card.dark svg {
             fill: #f8f9fa;
@@ -930,11 +936,8 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 992px) {
-             .contact-grid, .ai-grid, .tech-stack-grid {
+             .contact-grid, .ai-grid {
                 grid-template-columns: 1fr;
-            }
-            .ai-grid {
-                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
             .tech-stack-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1607,3 +1610,4 @@
     </script>
 </body>
 </html>
+
