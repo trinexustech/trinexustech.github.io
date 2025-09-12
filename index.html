@@ -95,7 +95,7 @@
             padding-bottom: 5px;
         }
         
-        .nav-menu li a:hover {
+        .nav-menu li a:hover, .nav-menu li a.hover-effect {
             color: #000;
         }
         
@@ -103,7 +103,7 @@
             color: #fff !important;
         }
         
-        .nav-menu li a.nav-button:hover {
+        .nav-menu li a.nav-button:hover, .nav-menu li a.nav-button.hover-effect {
             color: #fff !important;
         }
         
@@ -118,7 +118,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        .nav-button:hover {
+        .nav-button:hover, .nav-button.hover-effect {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 7px 18px rgba(0,0,0,0.3);
         }
@@ -223,7 +223,7 @@
             margin-bottom: 40px;
         }
 
-        .hero-tags span {
+        .hero-tags a {
             display: inline-block;
             padding: 10px 20px;
             border: 1px solid transparent;
@@ -232,9 +232,11 @@
             cursor: pointer;
             font-weight: 500;
             background-color: #f3f4f6;
+            text-decoration: none;
+            color: #333;
         }
 
-        .hero-tags span:hover {
+        .hero-tags a:hover, .hero-tags a.hover-effect {
             border-color: #e5e7eb;
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -254,7 +256,7 @@
             background-color: #000;
             color: #fff;
         }
-        .hero-actions .btn-primary:hover {
+        .hero-actions .btn-primary:hover, .hero-actions .btn-primary.hover-effect {
             background-color: #333;
             transform: translateY(-2px);
         }
@@ -263,7 +265,7 @@
             color: #000;
             border: 1px solid #000;
         }
-         .hero-actions .btn-secondary:hover {
+         .hero-actions .btn-secondary:hover, .hero-actions .btn-secondary.hover-effect {
             background-color: #000;
             color: #fff;
             transform: translateY(-2px);
@@ -288,7 +290,7 @@
             border: 1px solid #eee;
         }
 
-        .card:hover {
+        .card:hover, .card.hover-effect {
             transform: translateY(-6px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -303,7 +305,7 @@
             transition: transform 0.3s ease;
         }
 
-        .card:hover .icon {
+        .card:hover .icon, .card.hover-effect .icon {
             transform: scale(1.12);
         }
 
@@ -387,7 +389,7 @@
             overflow: hidden;
         }
 
-        .ai-card:hover {
+        .ai-card:hover, .ai-card.hover-effect {
             transform: translateY(-6px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
@@ -406,7 +408,7 @@
             transition: all 0.5s ease;
         }
         
-        .ai-card:hover img {
+        .ai-card:hover img, .ai-card.hover-effect img {
             filter: grayscale(0%);
             transform: scale(1.05);
         }
@@ -418,7 +420,7 @@
             transition: background 0.5s ease;
         }
         
-        .ai-card:hover .ai-card-overlay {
+        .ai-card:hover .ai-card-overlay, .ai-card.hover-effect .ai-card-overlay {
             background: rgba(0,0,0,0);
         }
 
@@ -477,7 +479,7 @@
             transition: all 0.2s;
         }
 
-        .ai-button:hover {
+        .ai-button:hover, .ai-button.hover-effect {
             background: #000;
             color: #fff;
         }
@@ -502,7 +504,7 @@
             justify-content: flex-start;
         }
         
-        .tech-card:hover {
+        .tech-card:hover, .tech-card.hover-effect {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
@@ -544,7 +546,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .metric:hover {
+        .metric:hover, .metric.hover-effect {
             transform: scale(1.08);
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
@@ -638,7 +640,7 @@
             border: 1px solid #eee;
         }
 
-        .compact-form:hover {
+        .compact-form:hover, .compact-form.hover-effect {
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transform: translateY(-2px);
         }
@@ -658,7 +660,7 @@
             transition: all 0.3s ease;
             border: 1px solid #eee;
         }
-        .contact-info-card:hover {
+        .contact-info-card:hover, .contact-info-card.hover-effect {
              transform: translateY(-6px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -767,7 +769,7 @@
             transition: all 0.3s ease;
         }
 
-        .submit-button:hover {
+        .submit-button:hover, .submit-button.hover-effect {
             background-color: #333;
             transform: scale(1.02);
         }
@@ -863,7 +865,7 @@
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
+        .footer-links a:hover, .footer-links a.hover-effect {
             color: #fff;
         }
         
@@ -883,7 +885,7 @@
             opacity: 0.8;
             transition: opacity 0.3s;
         }
-        .footer-social img:hover {
+        .footer-social a:hover img, .footer-social a.hover-effect img {
             opacity: 1;
         }
         
@@ -905,7 +907,7 @@
              transition: color 0.3s;
         }
         
-        .footer-bottom-links a:hover {
+        .footer-bottom-links a:hover, .footer-bottom-links a.hover-effect {
             color: #fff;
         }
 
@@ -929,7 +931,7 @@
             transition: opacity 0.3s;
         }
 
-        #scrollToTopBtn:hover {
+        #scrollToTopBtn:hover, #scrollToTopBtn.hover-effect {
             opacity: 1;
         }
 
@@ -1009,11 +1011,11 @@
         <div class="container nav-container">
             <a href="#home" class="nav-logo">Trinexus Technologies</a>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#solutions">Our Solutions</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact" class="nav-button">Get Started</a></li>
+                <li><a href="#home" class="touch-interactive">Home</a></li>
+                <li><a href="#solutions" class="touch-interactive">Our Solutions</a></li>
+                <li><a href="#case-studies" class="touch-interactive">Case Studies</a></li>
+                <li><a href="#about" class="touch-interactive">About Us</a></li>
+                <li><a href="#contact" class="nav-button touch-interactive">Get Started</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -1031,13 +1033,13 @@
             <p class="tagline">Engineered in the EU, Innovating for Europe.</p>
             <p class="hero-description">Trinexus Technologies develops cutting-edge artificial intelligence products that empower businesses across the EU. We build the future, one intelligent solution at a time.</p>
             <div class="hero-tags">
-                <span>🧑‍💻 Machine Learning</span>
-                <span>⚡ Automation</span>
-                <span>🎯 Precision AI</span>
+                <a href="#" class="touch-interactive">🧑‍💻 Machine Learning</a>
+                <a href="#" class="touch-interactive">⚡ Automation</a>
+                <a href="#" class="touch-interactive">🎯 Precision AI</a>
             </div>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Get Started ➔</a>
-                <a href="#case-studies" class="btn btn-secondary">View Case Studies</a>
+                <a href="#contact" class="btn btn-primary touch-interactive">Get Started ➔</a>
+                <a href="#case-studies" class="btn btn-secondary touch-interactive">View Case Studies</a>
             </div>
         </div>
     </header>
@@ -1052,7 +1054,7 @@
                 </div>
                 <div class="card-container">
                     <!-- Healthcare AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🩺</div>
                             <h2>Healthcare AI</h2>
@@ -1070,7 +1072,7 @@
                         </div>
                     </div>
                     <!-- Financial AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">💰</div>
                             <h2>Financial AI</h2>
@@ -1088,7 +1090,7 @@
                         </div>
                     </div>
                     <!-- Manufacturing AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🏭</div>
                             <h2>Manufacturing AI</h2>
@@ -1106,7 +1108,7 @@
                         </div>
                     </div>
                      <!-- Retail AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🛍️</div>
                             <h2>Retail AI</h2>
@@ -1124,7 +1126,7 @@
                         </div>
                     </div>
                     <!-- Energy AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">⚡</div>
                             <h2>Energy AI</h2>
@@ -1142,7 +1144,7 @@
                         </div>
                     </div>
                     <!-- Transportation AI -->
-                    <div class="card">
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🚚</div>
                             <h2>Transportation AI</h2>
@@ -1172,7 +1174,7 @@
                 </div>
                 <div class="ai-grid">
                     <!-- Card 1: Healthcare -->
-                    <div class="ai-card">
+                    <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=center" alt="Medical Diagnostics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Healthcare';">
                             <div class="ai-card-overlay"></div>
@@ -1191,12 +1193,12 @@
                             </ul>
                         </div>
                         <div class="ai-card-footer">
-                            <button class="ai-button">View Full Case Study →</button>
+                            <button class="ai-button touch-interactive">View Full Case Study →</button>
                         </div>
                     </div>
 
                     <!-- Card 2: Financial Services -->
-                    <div class="ai-card">
+                    <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center" alt="Financial Analytics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Finance';">
                             <div class="ai-card-overlay"></div>
@@ -1215,12 +1217,12 @@
                             </ul>
                         </div>
                         <div class="ai-card-footer">
-                            <button class="ai-button">View Full Case Study →</button>
+                            <button class="ai-button touch-interactive">View Full Case Study →</button>
                         </div>
                     </div>
 
                     <!-- Card 3: Automotive -->
-                    <div class="ai-card">
+                    <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&crop=center" alt="Automotive Manufacturing" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Automotive';">
                             <div class="ai-card-overlay"></div>
@@ -1239,12 +1241,12 @@
                             </ul>
                         </div>
                         <div class="ai-card-footer">
-                            <button class="ai-button">View Full Case Study →</button>
+                            <button class="ai-button touch-interactive">View Full Case Study →</button>
                         </div>
                     </div>
 
                     <!-- Card 4: E-commerce -->
-                    <div class="ai-card">
+                    <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center" alt="E-commerce Analytics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=E-commerce';">
                             <div class="ai-card-overlay"></div>
@@ -1263,24 +1265,24 @@
                             </ul>
                         </div>
                         <div class="ai-card-footer">
-                            <button class="ai-button">View Full Case Study →</button>
+                            <button class="ai-button touch-interactive">View Full Case Study →</button>
                         </div>
                     </div>
                 </div>
                  <div class="metrics-card">
-                    <div class="metric">
+                    <div class="metric touch-interactive">
                         <div class="metric-value">340%</div>
                         <div class="metric-label">Average ROI</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric touch-interactive">
                         <div class="metric-value">&lt; 90 Days</div>
                         <div class="metric-label">Implementation</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric touch-interactive">
                         <div class="metric-value">98%</div>
                         <div class="metric-label">Success Rate</div>
                     </div>
-                    <div class="metric">
+                    <div class="metric touch-interactive">
                         <div class="metric-value">4.9/5</div>
                         <div class="metric-label">Client Satisfaction</div>
                     </div>
@@ -1296,42 +1298,42 @@
                     <p>We leverage a modern, robust technology stack to build scalable and powerful AI solutions.</p>
                 </div>
                 <div class="tech-stack-grid">
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4IDIzMi42YTEwNCAxMDQgMCAxIDAgMC0yMDggMTA0IDEwNCAwIDAgMCAwIDIwOFptNzEuMS0xNTguM2ExMiAxMiAwIDAgMS0xLjcgMTZsLTM0LjcgNjEuNmE4IDggMCAwIDEtNy4yIDRsLTI3LjItNC42YTYgNiAwIDAgMC02IDUuM2w0LjMgMjUuOGE2IDYgMCAwIDEwIDUuNGwxNC4yIDIuNGE2IDYgMCAwIDEgNSA3LjFsLTcuNyA0NC4yYTggOCAwIDAgMS03LjcgNS43SDk3LjZhOCA4IDAgMCAxLTcuNy01LjdsLTcuNy00NC4yYTYgNiAwIDAgMSA1LTcuMWwxNC4yLTIuNGE2IDYgMCAwIDEgNi01LjRsNC4zLTI1LjhhNiA2IDAgMCAwLTYtNS4zbC0yNy4yIDQuNmE4IDggMCAwIDEtNy4yLTRsLTM0LjctNjEuNmExMiAxMiAwIDAgMSAxNC4zLTIwLjJsMzQuNyA2MS41YTggOCAwIDAgMSAuMiAxMGw1iellaud8bWMtMS45LTUxLjhhNiA2IDAgMCAxIDUuNS02LjVsMzQuNy01LjlhMTIgMTIgMCAwIDEgMTYgMS43Wm0tNzEuMSAxMjUuOWExMiAxMiAwIDEgMSAxMi0xMiAxMiAxMiAwIDAgMS0xMiAxMloiLz48L3N2Zz4=" alt="Mistral AI Logo"/>
                         <h3>Mistral AI</h3>
                         <p>Advanced, open-source large language models from Europe.</p>
                     </div>
-                     <div class="tech-card">
+                     <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjhsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
                         <h3>Hugging Face</h3>
                         <p>The leading platform for open-source models and datasets.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTY5LjMsNjZDMjAwLjQsNjYsMjI2LDQxLjcsMjI2LDEwLjZDMjI2LC0yMC40LDIwMC40LDAsMTY5LjMsMFMtNDQuNy0yMS4zLTQ0LjctNTIuNGMwLDI3LjYsMTYuMiw1Mi40LDQ0LjcsNTIuNG0tODIuNiwwQzEyMCw2NiwxNDUuNiw0MS43LDE0NS42LDEwLjZDMTQ1LjYsLTIwLjQsMTIwLDAsODYuNywwUzQyLC0yMS4zLDQyLC01Mi40YzAsMjcuNiwxNi4yLDUyLjQsNDIsNTIuNG0tNDIsODYuN0MyOC41LDE1Mi43LDAsMTgxLDAsMjEzLjFjMCwzMS4xLDI4LjUsNTIuNCw1OS42LDUyLjRzNTkuNi0yMS4zLDU5LjYtNTIuNGMwLTI3LjYtMTYuMi01Mi40LTQzLjgtNTIuNEg1OS42di0uMW0xMTEuNCwwYy0yNy42LDAtNDMuOCwyNC44LTQzLjgsNTIuNGMwLDMxLjEsMjguNSw1Mi40LDU5LjYsNTIuNHM1OS42LTIxLjMsNTkuNi01Mi40YzAtMzIuMS0yOC41LTU4LjQtNTkuNi01OC40WiIvPjwvc3ZnPg==" alt="Python Logo"/>
                         <h3>Python</h3>
                          <p>The core language for AI development and data science.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjI0LjMsOTEuNmMzLjEsNS4xLDUuMiwxMS41LDUuMiwxOC45VjI0MGMwLDEyLjctMTIuNSwyMC4zLTI0LDE0LjFsLTIuMS0xLjJsLTM1LjMtMjAuNGMwLDAsMCwwLDAsMGwtLjEtLjFMMTQ4LDIyM2wtMzUuMy0yMC40Yy0xMS41LTYuMi0yNC0xMy4zLTI0LTE0LjF2LTc1YzAtNy40LDIuMS0xMy44LDUuMi0xOC45bDM1LjItMjAuM0w2NC4xLDM4LjhsMzUuMywyMC40YzUuMSwzLjEsMTEuNSw1LjIsMTguOSw1LjJoNzQuOWM3LjQsMCwxMy44LTIuMSwxOC45LTUuMmwxNy42LTEwLjIgMTcuNywxMC4yWm0tNjAuOCw3Ny44bDI4LjIsMTYuM3YtMzIuNWwtMjguMiwxNi4yWm0tOTYtNTUuNWwyOC4yLDE2LjJMMzIsMTQ2LjRWMTIwbDI4LjIsMTYuM1ptMzIuNS01MS4zTCw1NS42LDQxLjRsLTIuOCwxLjZDNTEsNDQsNDgsNDYuMyw0OCw1MC4ydjE1NWwzNS4yLTIwLjQtLjEtLjEgMzUuMi0yMC4zbDM1LjIsMjAuMywzNS4yLTIwLjR2LTIuOGMwLDAsLjEtLjEsMC0uMWwtMzUuMy0yMC40Yy01LjEtMy4xLTExLjUtNS4yLTE4LjktNS4ySDk3LjljLTcuNCwwLTEzLjgsMi4xLTE4LjksNS4yWm0xNDQuMyw5NS4ybC0yLjgsMS42Yy0xLjYsLjkxMy0zLjEsMi40MDUtNC4xLDRsLTI4LjMsMTYuM3YzMi41bDI4LjItMTYuM2wxNC4xLTguMiwyLjgtMS42YzEuMS0uNiwxLjYtMS42LDEuNi0yLjR2LTEzLjhsLTExLjYtNi43WiIvPjwvc3ZnPg==" alt="TensorFlow Logo"/>
                         <h3>TensorFlow</h3>
                         <p>Google's framework for large-scale machine learning.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4LDMyYTYsNiAwIDAsMC02LDZ2MTc2YTYsNiAwIDAsMCAxMiwwdjE3LjZhODAsODAgMCAxLDAtLjEtMTYwLjFWODBhODAsODAgMCAwLDAsMCwxMDguMnYtNDguOGE2LDYgMCAwLDAtMTItLjFaTTU2LDEyOGE3Miw3MiAwIDEsMSA3Miw3MkE3Miw3MiAwIDAsMSA1NiwyMDhaIi8+PC9zdmc+" alt="PyTorch Logo"/>
                         <h3>PyTorch</h3>
                         <p>A flexible deep learning framework for research and production.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjE3LjQsMjE3LjQtMTQuMSwxNC4xYy0yMy4xLDIzLjEtNjAuNiwyMy4xLTgzLjcsMGwtMjQuNC0yNC40Yy0yMy4xLTIzLjEtMjMuMS02MC42LDAtODMuN2wxNC4xLTE0LjFMMzguNiw5NEw5NCwzOC42bDE0LjEtMTQuMWMxMS41LTExLjUsMjYuNy0xNy4zLDQxLjgtMTcuM3M0LjIsMCA4LjMsLjVMMTMzLjYsMjJjLTMuOC0xLjItNy44LTEuOC0xMS44LTEuOHMtMjMuMSw3LjgtMzIuOCwxNy41TDM4LjYsOTRjLTIzLjEsMjMuMS0yMy4xLDYwLjYsMCw4My43bDguMyw4LjNMMzguNiwxOTQuM2wxMy42LTEyLjVjLTYuMi0xMS05LjgtMjMuNy05LjgtMzcuMnMwLDAsMCwwYzAtMjMuMSw3LjgtNDQuNSwxNy42LTY0LjNsODIuMy04Mi4zYzExLjUtMTEuNSwyNi43LTE3LjMsNDEuOC0xNy4zczMwLjIsNS44LDQxLjgsMTcuM2MxMS41LDExLjUsMTcuMywyNi43LDE3LjMsNDEuOFMxOTYuMywxMjQuOCwxODQuOCwxMzYuM0w5NCwzOC42bC04LjMsOC4zTDg1LjcsMzguNmwtOC4zLDguMyA4LjMsOC4zTDgxLjQsNDYuOGw3My41LDczLjVjLTIwLjIsOS44LTQxLjIsMTcuNi02NC40LDE3LjZzLTM3LjItMy41LTY0LjQtOS44bDEzLjYtMTIuNUwzOC42LDEyOC41bC41LjlMMzguNiwxNDBsMTQuMS0xNC4xYzIzLjEtMjMuMSw2MC42LTIzLjEsODMuNywwbDI0LjQsMjQuNGMyMy4xLDIzLjEsMjMuMSw2MC42LDAsODMuN1ptLTY0LjQtNDguMWwtMjQuNC0yNC40Yy0xMS41LTExLjUtMzAuMi0xMS41LTQxLjgsMHMtMTEuNSwzMC4yLDAsNDEuOGwyNC40LDI0LjRjMTEuNSwxMS41LDMwLjIsMTEuNSw0MS44LDBzMTEuNS0zMC4yLDAtNDEuOFoiLz48L3N2Zz4=" alt="Kubernetes Logo"/>
                         <h3>Kubernetes</h3>
                         <p>For automated deployment and scaling of applications.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjQxLjgsOTYuNmwtMjYuNS00NGMtMTAuNS0xNy40LTI4LjktMjcuOS00OS0yNy45aC03NmMtMjAuMSwwLTM4LjUsMTAuNS00OSwyNy45TDE0LjIsOTYuNmMtMTAuNSwxNy40LTE0LjYsMzguNS0xMS4xLDYwLjFsOS42LDU4LjZjNS43LDM0LjksMzYuNSw2Mi4xLDczLjUsNjIuMWg3My45YzM3LDAsNjcuOC0yNy4yLDczLjUtNjIuMWw5LjYtNTguNmMzLjYtMjEuNi0uNi00Mi43LTExLjEtNjAuMVptLTM1LDg3LjljLTMuNywyMi4xLTIzLjQsMzkuMi00Ni42LDM5LjJIMTk2YzAsMCwwLDAsMCwwSDk5LjdjLTIzLjIsMC00Mi44LTE3LjEtNDYuNi0zOS4ybC03LjgtNDcuMWgxNzAuM2wtNy44LDQ3LjFabS0uMy02MS42SDUwLjVsMTUtMjQuOWM4LjItMTMuNSwyMi4xLTIxLjksMzctMjEuOWg3NmMxNC44LDAsMjguOCw4LjQsMzcsMjEuOWwxNSwyNC45Wm0tMTE2LjQtNDIuM2gtMTYuMXYxMC43aDE2LjF2LTEwLjdabTM0LjIsMGgtMTYuMXYxMC43aDE2LjF2LTEwLjdaIi8+PC9zdmc+" alt="Docker Logo"/>
                         <h3>Docker</h3>
                         <p>Containerization for consistent development environments.</p>
                     </div>
-                    <div class="tech-card">
+                    <div class="tech-card touch-interactive">
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjI4LjgsMTQxLjZsLTMzLjItNDEuMWMtMTEtMTMuNi0yMC4xLTIwLjItMjcuMS0xMi41bC0yMS40LDIzLjRsLTIwLjYtMjAuNmMtOC4xLTguMS0xMy4xLTEwLjgtMTUuNS05LjJsLTI1LjIsMjcuNmwtNDUuNC00NS40Yy02LjYtNi42LTE3LjQtNi42LTI0LDBsLTE2LjQsMTYuNGMtNi42LDYuNi02LjYsMTcuNCwwLDI0bDU3LjMsNTcuM2MtMTEsNC45LTE5LjIsMTIuOC0yMy45LDIyLjNsLTcuOC03LjhjLTYuNi02LjYtMTcuNC02LjYtMjQsMGwtMTYuNCwxNi40Yy02LjYsNi42LTYuNiwxNy40LDAsMjRsNTcuMyw1Ty4zYzYuNiw2LjYsMTcuNCw2LjYsMjQsMGwxMy4xLTEzLjFjOS4zLDcuNCwyMC4yLDEyLjQsMzIuMSwxNC40bDE4LjUsMTguNWM2LjYsNi42LDE3LjQsNi42LDI0LDBsMzYuMy0zNi4zYzYuNi02LjYsNi42LTE3LjQsMC0yNGwtMTcuMS0xNy4xYzEzLjYtMTEsMjIuMy0yNS45LDI0LjMtNDMuM2MxLjQtMTEuOC0xLjktMjQuMy04LjYtMzQuOVptLTEwLjEsMjEuM2MtMS44LDEzLjYtOC4xLDI1LjYtMTguMywzNC4ybDE3LjEsMTcuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdsLTM2LjMsMzYuM2MtMS42LDEuNi00LjEsMS42LTUuNywwbC0xOC41LTE4LjVjLTguOC0xLjMtMTctMy45LTI0LjYtNy42bDMuMywzLjNjMS42LDEuNiwxLjYsNC4xLDAsNS43bC0xMy4xLDEzLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtNTcuMy01Ny4zYy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw3LjgsNy44Yy42LS42LDEuMS0xLjMsMS43LTIuMWwzLjUtNC43YzEuMy0xLjcsMS45LTMuOCwxLjUtNS44bC0yLjUtOS4yTDkyLjQsODguMWwxMy42LDEzLjZjMS42LDEuNiw0LjEsMS42LDUuNywwbDIwLjYtMjAuNmMxLjYtMS42LDEuNi00LjEsMC01LjdsLTIwLjYtMjAuNmMtMS42LTEuNi00LjEtMS42LTUuNywwTDM3LjUsMTYxLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtMTYuNC0xNi40Yy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw0NS40LDQ1LjRjMS42LDEuNiw0LjEsMS42LDUuNywwbDI1LjItMjcuNmMxLjYtMS42LDQuMS0xLjYsNS43LDBsMjAuNiwyMC42YzEuNiwxLjYsNC4xLDEuNiw1LjcsMGwyMS40LTIzLjRjMS42LTEuNiw0LjEtMS42LDUuNywwbDMzLjIsNDEuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdaIi8+PC9zdmc+" alt="AWS Logo"/>
                         <h3>Cloud Platforms</h3>
                         <p>Leveraging AWS and Azure for scalable cloud infrastructure.</p>
@@ -1432,7 +1434,7 @@
                                 <textarea id="project-details" name="Project Details" required placeholder="Tell us about your challenges, goals, and what you'd like to achieve with AI..."></textarea>
                             </div>
                              <div class="submit-button-container">
-                                <button type="submit" class="submit-button">Send Inquiry</button>
+                                <button type="submit" class="submit-button touch-interactive">Send Inquiry</button>
                             </div>
                         </form>
                          <div id="confirmationMessage" class="confirmation-message">
@@ -1441,7 +1443,7 @@
                         </div>
                     </div>
                     <div class="contact-info-wrapper">
-                        <div class="contact-info-card">
+                        <div class="contact-info-card touch-interactive">
                             <h3>Contact Information</h3>
                             <ul>
                                 <li>
@@ -1462,7 +1464,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="contact-info-card dark">
+                        <div class="contact-info-card dark touch-interactive">
                             <h3>Ready to Get Started?</h3>
                             <p>Our AI experts are standing by to discuss your project requirements.</p>
                              <ul>
@@ -1494,119 +1496,139 @@
                     <h3>Trinexus Technologies</h3>
                     <p>Leading EU-focused AI technology company creating intelligent solutions that transform businesses across Europe.</p>
                     <div class="footer-social">
-                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSwzSDVDMy44OTUsMywzLDMuODk1LDMsNVYxOWMwLDEuMTA1LDAuODk1LDIsMiwyaDE0YzEuMTA1LDAsMi0wLjg5NSwyLTJWNUMyMSwzLjg5NSwyMC4xMDUsMywxOSwzeiBNOCwxN0g2VjExaDJWNzd6IE03LDkuOGMtMC45NjcsMC0xLjc1LTAuNzg0LTEuNzUtMS43NWMwLTAuOTY2LDAuNzgzLTEuNzUsMS43NS0xLjc1YzAuOTY2LDAsMS43NSwwLjc4NCwxLjc1LDEuNzVDOC43NSw5LjAxNiw3Ljk2Nyw5LjgsNyw5Ljh6IE0xOCwxN2gtMnYtMi44M2MwLTAuNjczLTAuMDEyLTEuNTM5LTAuOTM3LTEuNTM5Yy0wLjkzNywwLTEuMDgxLDAuNzMyLTEuMDgxLDEuNDg5VjE3aC0yVjExaDEuOTE5djAuODgyaDAuMDI3YzAuMjctMC41MTIsMC45My0xLjAzMSwyLjA3Ny0xLjAzMWMxLjU5LDAsMi45NzksMS4wNDMsMi45NzksMy40OTNWMTd6Ii8+PC9zdmc+" alt="LinkedIn"></a>
-                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwwQzUuMzczLDAsMCw1LjM3MywwLDEyczUuMzczLDEyLDEyLDEyYzYuNjI3LDAsMTItNS4zNzMsMTItMTJTMTguNjI3LDAsMTIsMHogTTExLjY0MywxNy40MDljLTAuNTcyLDAuMzI0LTEuMjU0LDAuNTAzLTEuOTY1LDAuNTAzYy0yLjA5OCwwLTMuOTU2LTEuNzAzLTQuMTI0LTMuNzgzSDguNjY3di0yLjE0M0g1LjQ1M2MwLjA2OC0zLjEwOCwyLjY5MS01LjYyNSw1Ljc5OS01LjYyNWMwLjk5NywwLDEuOTMzLDAuMzk4LDIuNjI0LDEuMTA5TDE1LjI1NSwyLjE4YzAuMDYyLTAuMDA4LDAuMTI1LTAuMDE1LDAuMTg4LTAuMDE1YzAuMTM0LDAsMC4yNjUsMC4wMjEsMC4zOTIsMC4wNjJMMTMuNjQ0LDYuNTljLTAuNDA1LTAuMjIxLTAuODQ2LTAuMzM0LTEuMjk5LTAuMzM0Yy0yLjA1MywwLTMuNzIsMS42NjYtMy43MiwzLjcyYzAsMC40MzIsMC4wNzYsMC44NDcsMC4yMTcsMS4yNDFsNC43ODMtMy4zNDJsMS4zODMsMi4xNDNMMTAuNTE4LDEzLjFsMi41NjEsMS41NTVMMTEuNjQzLDE3LjQwOXogTTE2LjcxNSwxNC43MDNjLTAuMjA5LDAuOTYzLTAuNTEzLDEuODY0LTAuOTMyLDIuNjQ2bC0xLjQwMy0yLjI5MWwyLjA5NSwxLjQ2N0MxNi41NTQsMTYuNjA0LDE2LjYyMywxNS42NTYsMTYuNzE1LDE0LjcwM3ogTTE4LjM2Nyw5LjY4NGMtMC4xNTQsMS4wNjMtMC40MzYsMi4wNzItMC44MTcsMy4wMDlsLTIuMjQ2LTEuNTU2bDIuOTMyLDEuNTc4QzE4LjM0MywxMS42NDIsMTguNDEzLDEwLjY4MiwxOC4zNjcsOS42ODR6Ii8+PC9zdmc+" alt="Instagram"></a>
-                        <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwzQTEsMSwwLDAsMCwxMC44OSwzLjIzTDIuMjMsOS43MkExLDEsMCwwLDAsMiwxMC42MlYyMGExLDEsMCwwLDAsMSwxSDIxYTEsMSwwLDAsMCwxLTFWMTAuNjJhMSwxLDAsMCwwLS4yMy0uNjFsLTguNjYtNi40OEExLDEsMCwwLDAsMTIsM1ptOCwySDExLjg0TDE5LDEwLjA3Wk00LDExLjE5bDcuMTEtNS4zNEwxOC4yMSwxMS4xOUEzLDI5LDMsMjksMCwwLDEsMTEuNjYsMTNBMi42NywyLjY3LDAsMCwxLDQsMTEuMTlabTAsNi4yNVYxMi4zMWExLDEsMCwwLDAsLjQyLjMzbDcuMDgsNS4zYTEsMSwwLDAsMCwxLDBsNy4wOC01LjNhMSwxLDAsMCwwLC40Mi0uMzFWMTcuNDRhMy40NywzLjQ3LDAsMCwxLTIuNTgsMi41Nkg2LjU4QTMuNDcsMy40NywwLDAsMSw0LDE3LjQ0WiIvPjwvc3ZnPg==" alt="GitHub"></a>
+                        <a href="#" class="touch-interactive"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSwzSDVDMy44OTUsMywzLDMuODk1LDMsNVYxOWMwLDEuMTA1LDAuODk1LDIsMiwyaDE0YzEuMTA1LDAsMi0wLjg5NSwyLTJWNUMyMSwzLjg5NSwyMC4xMDUsMywxOSwzeiBNOCwxN0g2VjExaDJWNzd6IE03LDkuOGMtMC45NjcsMC0xLjc1LTAuNzg0LTEuNzUtMS43NWMwLTAuOTY2LDAuNzgzLTEuNzUsMS43NS0xLjc1YzAuOTY2LDAsMS43NSwwLjc4NCwxLjc1LDEuNzVDOC43NSw5LjAxNiw3Ljk2Nyw5LjgsNyw5Ljh6IE0xOCwxN2gtMnYtMi44M2MwLTAuNjczLTAuMDEyLTEuNTM5LTAuOTM3LTEuNTM5Yy0wLjkzNywwLTEuMDgxLDAuNzMyLTEuMDgxLDEuNDg5VjE3aC0yVjExaDEuOTE5djAuODgyaDAuMDI3YzAuMjctMC41MTIsMC45My0xLjAzMSwyLjA3Ny0xLjAzMWMxLjU5LDAsMi45NzksMS4wNDMsMi45NzksMy40OTNWMTd6Ii8+PC9zdmc+" alt="LinkedIn"></a>
+                        <a href="#" class="touch-interactive"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwwQzUuMzczLDAsMCw1LjM3MywwLDEyczUuMzczLDEyLDEyLDEyYzYuNjI3LDAsMTItNS4zNzMsMTItMTJTMTguNjI3LDAsMTIsMHogTTExLjY0MywxNy40MDljLTAuNTcyLDAuMzI0LTEuMjU0LDAuNTAzLTEuOTY1LDAuNTAzYy0yLjA5OCwwLTMuOTU2LTEuNzAzLTQuMTI0LTMuNzgzSDguNjY3di0yLjE0M0g1LjQ1M2MwLjA2OC0zLjEwOCwyLjY5MS01LjYyNSw1Ljc5OS01LjYyNWMwLjk5NywwLDEuOTMzLDAuMzk4LDIuNjI0LDEuMTA5TDE1LjI1NSwyLjE4YzAuMDYyLTAuMDA4LDAuMTI1LTAuMDE1LDAuMTg4LTAuMDE1YzAuMTM0LDAsMC4yNjUsMC4wMjEsMC4zOTIsMC4wNjJMMTMuNjQ0LDYuNTljLTAuNDA1LTAuMjIxLTAuODQ2LTAuMzM0LTEuMjk5LTAuMzM0Yy0yLjA1MywwLTMuNzIsMS42NjYtMy43MiwzLjcyYzAsMC40MzIsMC4wNzYsMC44NDcsMC4yMTcsMS4yNDFsNC43ODMtMy4zNDJsMS4zODMsMi4xNDNMMTAuNTE4LDEzLjFsMi41NjEsMS41NTVMMTEuNjQzLDE3LjQwOXogTTE2LjcxNSwxNC43MDNjLTAuMjA5LDAuOTYzLTAuNTEzLDEuODY0LTAuOTMyLDIuNjQ2bC0xLjQwMy0yLjI5MWwyLjA5NSwxLjQ2N0MxNi41NTQsMTYuNjA0LDE2LjYyMywxNS42NTYsMTYuNzE1LDE0LjcwM3ogTTE4LjM2Nyw5LjY4NGMtMC4xNTQsMS4wNjMtMC40MzYsMi4wNzItMC44MTcsMy4wMDlsLTIuMjQ2LTEuNTU2bDIuOTMyLDEuNTc4QzE4LjM0MywxMS42NDIsMTguNDEzLDEwLjY4MiwxOC4zNjcsOS42ODR6Ii8+PC9zdmc+" alt="Instagram"></a>
+                        <a href="#" class="touch-interactive"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiwzQTEsMSwwLDAsMCwxMC44OSwzLjIzTDIuMjMsOS43MkExLDEsMCwwLDAsMiwxMC42MlYyMGExLDEsMCwwLDAsMSwxSDIxYTEsMSwwLDAsMCwxLTFWMTAuNjJhMSwxLDAsMCwwLS4yMy0uNjFsLTguNjYtNi40OEExLDEsMCwwLDAsMTIsM1ptOCwySDExLjg0TDE5LDEwLjA3Wk00LDExLjE5bDcuMTEtNS4zNEwxOC4yMSwxMS4xOUEzLDI5LDMsMjksMCwwLDEsMTEuNjYsMTNBMi42NywyLjY3LDAsMCwxLDQsMTEuMTlabTAsNi4yNVYxMi4zMWExLDEsMCwwLDAsLjQyLjMzbDcuMDgsNS4zYTEsMSwwLDAsMCwxLDBsNy4wOC01LjNhMSwxLDAsMCwwLC40Mi0uMzFWMTcuNDRhMy40NywzLjQ3LDAsMCwxLTIuNTgsMi41Nkg2LjU4QTMuNDcsMy40NywwLDAsMSw0LDE3LjQ0WiIvPjwvc3ZnPg==" alt="GitHub"></a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#solutions">Our Solutions</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#home" class="touch-interactive">Home</a></li>
+                        <li><a href="#solutions" class="touch-interactive">Our Solutions</a></li>
+                        <li><a href="#case-studies" class="touch-interactive">Case Studies</a></li>
+                        <li><a href="#about" class="touch-interactive">About Us</a></li>
                     </ul>
                 </div>
                  <div class="footer-links">
                     <h4>Corporate</h4>
                     <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press Release</a></li>
-                        <li><a href="mailto:careers@trinexus.eu">Careers @ Trinexus</a></li>
+                        <li><a href="#" class="touch-interactive">Blog</a></li>
+                        <li><a href="#" class="touch-interactive">Press Release</a></li>
+                        <li><a href="mailto:careers@trinexus.eu" class="touch-interactive">Careers @ Trinexus</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2024 Trinexus Technologies. All rights reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a> |
-                    <a href="#">Imprint</a> |
-                    <a href="#">Cookie Policy</a> |
-                    <a href="#">Terms & Conditions</a>
+                    <a href="#" class="touch-interactive">Privacy Policy</a> |
+                    <a href="#" class="touch-interactive">Imprint</a> |
+                    <a href="#" class="touch-interactive">Cookie Policy</a> |
+                    <a href="#" class="touch-interactive">Terms & Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     
-    <button id="scrollToTopBtn" title="Back to top">Back to Top</button>
+    <button id="scrollToTopBtn" title="Back to top" class="touch-interactive">Back to Top</button>
 
     <script>
-        const form = document.getElementById('aiForm');
-        const formContainer = document.getElementById('form-container');
-        const formWrapper = document.querySelector('.contact-form-wrapper');
-        const confirmation = document.getElementById('confirmationMessage');
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        const submitButton = form.querySelector('.submit-button');
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('aiForm');
+            const formContainer = document.getElementById('form-container');
+            const formWrapper = document.querySelector('.contact-form-wrapper');
+            const confirmation = document.getElementById('confirmationMessage');
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            const submitButton = form.querySelector('.submit-button');
+            const interactiveElements = document.querySelectorAll('.touch-interactive');
 
+            // --- Hamburger Menu ---
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
 
-        // --- Hamburger Menu ---
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-        
-        // --- Form Submission Animation ---
-        function createConfetti(container) {
-            const containerRect = container.getBoundingClientRect();
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                
-                const startX = Math.random() * submitButton.offsetWidth;
-                const startY = Math.random() * submitButton.offsetHeight;
-
-                // Position relative to the container
-                const endX = Math.random() * containerRect.width - (submitButton.offsetLeft + startX);
-                const endY = Math.random() * containerRect.height - (submitButton.offsetTop + startY);
-                
-                confetti.style.setProperty('--start-x', `${startX}px`);
-                confetti.style.setProperty('--start-y', `${startY}px`);
-                confetti.style.setProperty('--end-x', `${endX}px`);
-                confetti.style.setProperty('--end-y', `${endY}px`);
-
-                confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                submitButton.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 1200);
+            document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }));
+            
+            // --- Touch Hover Effects ---
+            function removeHoverClass() {
+                interactiveElements.forEach(el => {
+                    el.classList.remove('hover-effect');
+                });
             }
-        }
-        
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); 
-            createConfetti(formContainer);
+
+            interactiveElements.forEach(element => {
+                element.addEventListener('touchstart', function(event) {
+                    removeHoverClass();
+                    event.currentTarget.classList.add('hover-effect');
+                }, { passive: true });
+            });
             
-            form.classList.add('flip-out');
+            document.body.addEventListener('touchstart', function(event) {
+                if (!event.target.closest('.touch-interactive')) {
+                    removeHoverClass();
+                }
+            }, { passive: true });
+
+            // --- Form Submission Animation ---
+            function createConfetti(container) {
+                const containerRect = container.getBoundingClientRect();
+                for (let i = 0; i < 50; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.classList.add('confetti');
+                    
+                    const startX = Math.random() * submitButton.offsetWidth;
+                    const startY = Math.random() * submitButton.offsetHeight;
+
+                    const endX = Math.random() * containerRect.width - (submitButton.offsetLeft + startX);
+                    const endY = Math.random() * containerRect.height - (submitButton.offsetTop + startY);
+                    
+                    confetti.style.setProperty('--start-x', `${startX}px`);
+                    confetti.style.setProperty('--start-y', `${startY}px`);
+                    confetti.style.setProperty('--end-x', `${endX}px`);
+                    confetti.style.setProperty('--end-y', `${endY}px`);
+
+                    confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                    submitButton.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 1200);
+                }
+            }
             
-            setTimeout(() => {
-                form.style.display = 'none';
-                confirmation.style.display = 'block';
-                confirmation.classList.add('flip-in');
-                formWrapper.style.height = confirmation.offsetHeight + 'px';
-            }, 600);
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); 
+                createConfetti(formContainer);
+                
+                form.classList.add('flip-out');
+                
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    confirmation.style.display = 'block';
+                    confirmation.classList.add('flip-in');
+                    formWrapper.style.height = confirmation.offsetHeight + 'px';
+                }, 600);
+            });
+
+            // --- Scroll to Top Button ---
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+              } else {
+                scrollToTopBtn.style.display = "none";
+              }
+            }
+
+            scrollToTopBtn.addEventListener("click", function() {
+              window.scrollTo({top: 0, behavior: 'smooth'});
+            });
         });
-
-        // --- Scroll to Top Button ---
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollToTopBtn.style.display = "block";
-          } else {
-            scrollToTopBtn.style.display = "none";
-          }
-        }
-
-        scrollToTopBtn.addEventListener("click", function() {
-          window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-
     </script>
 </body>
 </html>
