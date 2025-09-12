@@ -16,7 +16,7 @@
         }
 
         html, body {
-            overflow-x: hidden; /* Prevents horizontal scrollbar caused by the full-bleed fix */
+            overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
@@ -28,7 +28,6 @@
         }
 
         /* --- Full-width Bleed Fix --- */
-        /* This class forces an element to break out of a constraining parent container */
         .full-bleed {
             width: 100vw;
             position: relative;
@@ -94,19 +93,8 @@
             color: #000;
         }
         
-        .nav-menu li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #000;
-            transition: width 0.3s ease-out;
-        }
-        
-        .nav-menu li a:hover::after {
-            width: 100%;
+        .nav-menu li a.nav-button:hover {
+            color: #fff;
         }
         
         .nav-button {
@@ -116,13 +104,13 @@
             font-weight: 700;
             transition: all 0.2s ease-out;
             background-color: #000;
-            color: #fff;
+            color: #fff !important;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .nav-button:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 7px 18px rgba(0,0,0,0.3);
         }
 
         .hamburger {
@@ -139,9 +127,8 @@
             background-color: #333;
         }
 
-
         section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
         
         section:nth-of-type(even) {
@@ -180,9 +167,9 @@
         /* --- Hero Section --- */
         .hero {
             text-align: center;
-            padding: 80px 20px;
+            padding: 40px 20px; /* Reduced padding */
             background-color: #fff;
-            min-height: calc(100vh - 74px); /* Adjust for nav height */
+            min-height: calc(100vh - 74px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -365,7 +352,7 @@
         /* --- Case Study Cards --- */
         .ai-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 32px;
         }
 
@@ -474,7 +461,7 @@
         /* --- Technology Stack --- */
         .tech-stack-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
             text-align: center;
         }
@@ -485,6 +472,10 @@
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .tech-card:hover {
@@ -492,15 +483,13 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         
-        .tech-card svg {
-            width: 50px;
-            height: 50px;
+        .tech-card img {
+            height: 48px;
             margin-bottom: 15px;
-            fill: #333;
         }
         
         .tech-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #000;
         }
 
@@ -545,28 +534,44 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            gap: 30px;
+            align-items: stretch;
         }
         
-        .about-content h3 {
+        .about-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        
+        .about-card h3 {
             font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .value-item {
+            position: relative;
+            padding-left: 20px;
             margin-bottom: 15px;
         }
         
-        .about-content ul {
-            list-style: none;
+        .value-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #e5e7eb;
+            border-radius: 3px;
         }
         
-        .about-content ul li {
-            margin-bottom: 15px;
-        }
-        
-        .about-content li strong {
+        .value-item strong {
             display: block;
             color: #000;
         }
-
 
         /* --- Contact Section --- */
         .contact-grid {
@@ -641,6 +646,7 @@
             width: 20px;
             height: 20px;
             fill: #333;
+            flex-shrink: 0;
         }
 
         .contact-info-card.dark {
@@ -775,6 +781,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
+            align-items: center;
         }
         
         .footer-about h3 {
@@ -835,13 +842,16 @@
              .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
                 left: -100%;
-                top: 70px;
+                top: 74px; /* Match nav height */
                 gap: 0;
                 flex-direction: column;
                 background-color: #fff;
@@ -857,6 +867,11 @@
 
             .nav-menu li {
                 padding: 1rem 0;
+            }
+            
+            .nav-menu li a.nav-button {
+                display: inline-block;
+                width: auto;
             }
 
             .hamburger {
@@ -930,7 +945,7 @@
                     <p>We develop specialized artificial intelligence products tailored to the unique challenges and opportunities within each industry sector.</p>
                 </div>
                 <div class="card-container">
-                    <!-- Cards remain the same -->
+                    <!-- Healthcare AI -->
                     <div class="card">
                         <div class="card-header">
                             <div class="icon">🩺</div>
@@ -948,6 +963,7 @@
                             <div class="tags"><span>Hospitals</span><span>Clinics</span><span>Med Tech</span></div>
                         </div>
                     </div>
+                    <!-- Financial AI -->
                     <div class="card">
                         <div class="card-header">
                             <div class="icon">💰</div>
@@ -965,6 +981,7 @@
                             <div class="tags"><span>Banks</span><span>FinTech</span><span>Insurance</span></div>
                         </div>
                     </div>
+                    <!-- Manufacturing AI -->
                     <div class="card">
                         <div class="card-header">
                             <div class="icon">🏭</div>
@@ -980,6 +997,60 @@
                             </ul>
                             <h4>Industries</h4>
                             <div class="tags"><span>Automotive</span><span>Electronics</span><span>Aerospace</span></div>
+                        </div>
+                    </div>
+                     <!-- Retail AI -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon">🛍️</div>
+                            <h2>Retail AI</h2>
+                            <p>Customer behavior analysis, inventory optimization, and personalized shopping experiences.</p>
+                        </div>
+                        <div class="card-body">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Customer Analytics</li>
+                                <li>Inventory Management</li>
+                                <li>Recommendation Engines</li>
+                            </ul>
+                            <h4>Industries</h4>
+                            <div class="tags"><span>E-commerce</span><span>Fashion</span><span>Grocery</span></div>
+                        </div>
+                    </div>
+                    <!-- Energy AI -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon">⚡</div>
+                            <h2>Energy AI</h2>
+                            <p>Smart grid management, renewable energy optimization, and consumption forecasting.</p>
+                        </div>
+                        <div class="card-body">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Smart Grid Management</li>
+                                <li>Energy Forecasting</li>
+                                <li>Renewable Integration</li>
+                            </ul>
+                            <h4>Industries</h4>
+                            <div class="tags"><span>Utilities</span><span>Solar</span><span>Wind</span></div>
+                        </div>
+                    </div>
+                    <!-- Transportation AI -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon">🚚</div>
+                            <h2>Transportation AI</h2>
+                            <p>Autonomous systems, route optimization, and fleet management solutions.</p>
+                        </div>
+                        <div class="card-body">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Route Optimization</li>
+                                <li>Fleet Management</li>
+                                <li>Autonomous Systems</li>
+                            </ul>
+                            <h4>Industries</h4>
+                            <div class="tags"><span>Logistics</span><span>Aviation</span><span>Ride-sharing</span></div>
                         </div>
                     </div>
                 </div>
@@ -1120,24 +1191,36 @@
                 </div>
                 <div class="tech-stack-grid">
                     <div class="tech-card">
-                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4IDIzMi42YTEwNCAxMDQgMCAxIDAgMC0yMDggMTA0IDEwNCAwIDAgMCAwIDIwOFptNzEuMS0xNTguM2ExMiAxMiAwIDAgMS0xLjcgMTZsLTM0LjcgNjEuNmE4IDggMCAwIDEtNy4yIDRsLTI3LjItNC42YTYgNiAwIDAgMC02IDUuM2w0LjMgMjUuOGE2IDYgMCAwIDEwIDUuNGwxNC4yIDIuNGE2IDYgMCAwIDEgNSA3LjFsLTcuNyA0NC4yYTggOCAwIDAgMS03LjcgNS43SDk3LjZhOCA4IDAgMCAxLTcuNy01LjdsLTcuNy00NC4yYTYgNiAwIDAgMSA1LTcuMWwxNC4yLTIuNGE2IDYgMCAwIDEgNi01LjRsNC4zLTI1LjhhNiA2IDAgMCAwLTYtNS4zbC0yNy4yIDQuNmE4IDggMCAwIDEtNy4yLTRsLTM0LjctNjEuNmExMiAxMiAwIDAgMSAxNC4zLTIwLjJsMzQuNyA2MS41YTggOCAwIDAgMSAuMiAxMGw1MS41IDguNmE2IDYgMCAwIDAgNS41LTUuNmwtOC42LTUxLjhhNiA2IDAgMCAxIDUuNS02LjVsMzQuNy01LjlhMTIgMTIgMCAwIDEgMTYgMS43Wm0tNzEuMSAxMjUuOWExMiAxMiAwIDEgMSAxMi0xMiAxMiAxMiAwIDAgMS0xMiAxMloiLz48L3N2Zz4=" alt="Mistral AI Logo"/>
+                        <h3>Mistral AI</h3>
+                    </div>
+                     <div class="tech-card">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjUwLjIsMTczLjhsLTI5LjQsMjkuNC0xNi4yLTE2LjItMTYtMTYtMjEuOSwyMS45Yy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44LTYuNSwwLTEzLjEtMi4xLTE4LjYtNi4zTDkxLjUsMTYwLjZMNjcsMTM2LjFsLTI0LjUsMjQuNS0yLjEsMi4xYy01LjksNS45LTEzLjgsOC44LTIxLjcsOC44cy0xNS44LTIuOS0yMS43LTguOGMtMTItMTItMTItMzEuNSAwLTQzLjRMNzAuOCw0MS4yYyExMi0xMiwzMS41LTEyLDQzLjQsMGw0MS40LDQxLjRjMTIsMTIsMTIsMzEuNSwwLDQzLjRsLTEwLjIsMTAuMiwyNC41LDI0LjUsMTYuMi0xNi4yLDEyLjUtMTIuNSwyMS45LDIxLjljNS45LDUuOSwxMy44LDguOCwyMS43LDguOHM5LjQtNC4xLDE2LjktMTEuNWwyMS4yLTIxLjJjMTIuMS0xMi4xLDEyLjEtMzEuNSwwLTQzLjVsLTQxLjQtNDEuNGMtMTItMTItMzEuNS0xMi00My40LDBMNjUuMSw4Mi44Yy0xMiwyMS45LTYuNyw0OS41LDExLjYsNjYuMmw0Ny4yLDQ3LjJjMTEuMyw5LDMwLjgsNC43LDM1LjEtMTAuMmwyMS45LTY5LjYsNDEuNC00MS40YzEyLTEyLDMxLjUtMTIsNDMuNCwwczEyLDMxLjUsMCw0My40WiIvPjwvc3ZnPg==" alt="Hugging Face Logo"/>
+                        <h3>Hugging Face</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTY5LjMsNjZDMjAwLjQsNjYsMjI2LDQxLjcsMjI2LDEwLjZDMjI2LC0yMC40LDIwMC40LDAsMTY5LjMsMFMtNDQuNy0yMS4zLTQ0LjctNTIuNGMwLDI3LjYsMTYuMiw1Mi40LDQ0LjcsNTIuNG0tODIuNiwwQzEyMCw2NiwxNDUuNiw0MS43LDE0NS42LDEwLjZDMTQ1LjYsLTIwLjQsMTIwLDAsODYuNywwUzQyLC0yMS4zLDQyLC01Mi40YzAsMjcuNiwxNi4yLDUyLjQsNDIsNTIuNG0tNDIsODYuN0MyOC41LDE1Mi43LDAsMTgxLDAsMjEzLjFjMCwzMS4xLDI4LjUsNTIuNCw1OS42LDUyLjRzNTkuNi0yMS4zLDU5LjYtNTIuNGMwLTI3LjYtMTYuMi01Mi40LTQzLjgtNTIuNEg1OS42di0uMW0xMTEuNCwwYy0yNy42LDAtNDMuOCwyNC44LTQzLjgsNTIuNGMwLDMxLjEsMjguNSw1Mi40LDU5LjYsNTIuNHM1OS42LTIxLjMsNTkuNi01Mi40YzAtMzIuMS0yOC41LTU4LjQtNTkuNi01OC40WiIvPjwvc3ZnPg==" alt="Python Logo"/>
                         <h3>Python</h3>
                     </div>
                     <div class="tech-card">
-                       <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjI0LjMsOTEuNmMzLjEsNS4xLDUuMiwxMS41LDUuMiwxOC45VjI0MGMwLDEyLjctMTIuNSwyMC4zLTI0LDE0LjFsLTIuMS0xLjJsLTM1LjMtMjAuNGMwLDAsMCwwLDAsMGwtLjEtLjFMMTQ4LDIyM2wtMzUuMy0yMC40Yy0xMS41LTYuMi0yNC0xMy4zLTI0LTE0LjF2LTc1YzAtNy40LDIuMS0xMy44LDUuMi0xOC45bDM1LjItMjAuM0w2NC4xLDM4LjhsMzUuMywyMC40YzUuMSwzLjEsMTEuNSw1LjIsMTguOSw1LjJoNzQuOWM3LjQsMCwxMy44LTIuMSwxOC45LTUuMmwxNy42LTEwLjIgMTcuNywxMC4yWm0tNjAuOCw3Ny44bDI4LjIsMTYuM3YtMzIuNWwtMjguMiwxNi4yWm0tOTYtNTUuNWwyOC4yLDE2LjJMMzIsMTQ2LjRWMTIwbDI4LjIsMTYuM1ptMzIuNS01MS4zTCw1NS42LDQxLjRsLTIuOCwxLjZDNTEsNDQsNDgsNDYuMyw0OCw1MC4ydjE1NWwzNS4yLTIwLjQtLjEtLjEgMzUuMi0yMC4zbDM1LjIsMjAuMywzNS4yLTIwLjR2LTIuOGMwLDAsLjEtLjEsMC0uMWwtMzUuMy0yMC40Yy01LjEtMy4xLTExLjUtNS4yLTE4LjktNS4ySDk3LjljLTcuNCwwLTEzLjgsMi4xLTE4LjksNS4yWm0xNDQuMyw5NS4ybC0yLjgsMS42Yy0xLjYsLjkxMy0zLjEsMi40MDUtNC4xLDRsLTI4LjMsMTYuM3YzMi41bDI4LjItMTYuM2wxNC4xLTguMiwyLjgtMS42YzEuMS0uNiwxLjYtMS42LDEuNi0yLjR2LTEzLjhsLTExLjYtNi43WiIvPjwvc3ZnPg==" alt="TensorFlow Logo"/>
                         <h3>TensorFlow</h3>
                     </div>
                     <div class="tech-card">
-                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMTI4LDMyYTYsNiAwIDAsMC02LDZ2MTc2YTYsNiAwIDAsMCAxMiwwdjE3LjZhODAsODAgMCAxLDAtLjEtMTYwLjFWODBhODAsODAgMCAwLDAsMCwxMDguMnYtNDguOGE2LDYgMCAwLDAtMTItLjFaTTU2LDEyOGE3Miw3MiAwIDEsMSA3Miw3MkE3Miw3MiAwIDAsMSA1NiwyMDhaIi8+PC9zdmc+" alt="PyTorch Logo"/>
                         <h3>PyTorch</h3>
                     </div>
                     <div class="tech-card">
-                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjE3LjQsMjE3LjQtMTQuMSwxNC4xYy0yMy4xLDIzLjEtNjAuNiwyMy4xLTgzLjcsMGwtMjQuNC0yNC40Yy0yMy4xLTIzLjEtMjMuMS02MC42LDAtODMuN2wxNC4xLTE0LjFMMzguNiw5NEw5NCwzOC42bDE0LjEtMTQuMWMxMS41LTExLjUsMjYuNy0xNy4zLDQxLjgtMTcuM3M0LjIsMCA4LjMsLjVMMTMzLjYsMjJjLTMuOC0xLjItNy44LTEuOC0xMS44LTEuOHMtMjMuMSw3LjgtMzIuOCwxNy41TDM4LjYsOTRjLTIzLjEsMjMuMS0yMy4xLDYwLjYsMCw4My43bDguMyw4LjNMMzguNiwxOTQuM2wxMy42LTEyLjVjLTYuMi0xMS05LjgtMjMuNy05LjgtMzcuMnMwLDAsMCwwYzAtMjMuMSw3LjgtNDQuNSwxNy42LTY0LjNsODIuMy04Mi4zYzExLjUtMTEuNSwyNi43LTE3LjMsNDEuOC0xNy4zczMwLjIsNS44LDQxLjgsMTcuM2MxMS41LDExLjUsMTcuMywyNi43LDE3LjMsNDEuOFMxOTYuMywxMjQuOCwxODQuOCwxMzYuM0w5NCwzOC42bC04LjMsOC4zTDg1LjcsMzguNmwtOC4zLDguMyA4LjMsOC4zTDgxLjQsNDYuOGw3My41LDczLjVjLTIwLjIsOS44LTQxLjIsMTcuNi02NC40LDE3LjZzLTM3LjItMy41LTY0LjQtOS44bDEzLjYtMTIuNUwzOC42LDEyOC41bC41LjlMMzguNiwxNDBsMTQuMS0xNC4xYzIzLjEtMjMuMSw2MC42LTIzLjEsODMuNywwbDI0LjQsMjQuNGMyMy4xLDIzLjEsMjMuMSw2MC42LDAsODMuN1ptLTY0LjQtNDguMWwtMjQuNC0yNC40Yy0xMS41LTExLjUtMzAuMi0xMS41LTQxLjgsMHMtMTEuNSwzMC4yLDAsNDEuOGwyNC40LDI0LjRjMTEuNSwxMS41LDMwLjIsMTEuNSw0MS44LDBzMTEuNS0zMC4yLDAtNDEuOFoiLz48L3N2Zz4=" alt="Kubernetes Logo"/>
                         <h3>Kubernetes</h3>
                     </div>
                     <div class="tech-card">
-                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
-                        <h3>AWS & Azure</h3>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJNMjQxLjgsOTYuNmwtMjYuNS00NGMtMTAuNS0xNy40LTI4LjktMjcuOS00OS0yNy45aC03NmMtMjAuMSwwLTM4LjUsMTAuNS00OSwyNy45TDE0LjIsOTYuNmMtMTAuNSwxNy40LTE0LjYsMzguNS0xMS4xLDYwLjFsOS42LDU4LjZjNS43LDM0LjksMzYuNSw2Mi4xLDczLjUsNjIuMWg3My45YzM3LDAsNjcuOC0yNy4yLDczLjUtNjIuMWw5LjYtNTguNmMzLjYtMjEuNi0uNi00Mi43LTExLjEtNjAuMVptLTM1LDg3LjljLTMuNywyMi4xLTIzLjQsMzkuMi00Ni42LDM5LjJIMTk2YzAsMCwwLDAsMCwwSDk5LjdjLTIzLjIsMC00Mi44LTE3LjEtNDYuNi0zOS4ybC03LjgtNDcuMWgxNzAuM2wtNy44LDQ3LjFabS0uMy02MS42SDUwLjVsMTUtMjQuOWM4LjItMTMuNSwyMi4xLTIxLjksMzctMjEuOWg3NmMxNC44LDAsMjguOCw4LjQsMzcsMjEuOWwxNSwyNC45Wm0tMTE2LjQtNDIuM2gtMTYuMXYxMC43aDE2LjF2LTEwLjdabTM0LjIsMGgtMTYuMXYxMC43aDE2LjF2LTEwLjdaIi8+PC9zdmc+" alt="Docker Logo"/>
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBkPSJtMjI4LjgsMTQxLjZsLTMzLjItNDEuMWMtMTEtMTMuNi0yMC4xLTIwLjItMjcuMS0xMi41bC0yMS40LDIzLjRsLTIwLjYtMjAuNmMtOC4xLTguMS0xMy4xLTEwLjgtMTUuNS05LjJsLTI1LjIsMjcuNmwtNDUuNC00NS40Yy02LjYtNi42LTE3LjQtNi42LTI0LDBsLTE2LjQsMTYuNGMtNi42LDYuNi02LjYsMTcuNCwwLDI0bDU3LjMsNTcuM2MtMTEsNC45LTE5LjIsMTIuOC0yMy45LDIyLjNsLTcuOC03LjhjLTYuNi02LjYtMTcuNC02LjYtMjQsMGwtMTYuNCwxNi40Yy02LjYsNi42LTYuNiwxNy40LDAsMjRsNTcuMyw1Ny4zYzYuNiw2LjYsMTcuNCw2LjYsMjQsMGwxMy4xLTEzLjFjOS4zLDcuNCwyMC4yLDEyLjQsMzIuMSwxNC40bDE4LjUsMTguNWM2LjYsNi42LDE3LjQsNi42LDI0LDBsMzYuMy0zNi4zYzYuNi02LjYsNi42LTE3LjQsMC0yNGwtMTcuMS0xNy4xYzEzLjYtMTEsMjIuMy0yNS45LDI0LjMtNDMuM2MxLjQtMTEuOC0xLjktMjQuMy04LjYtMzQuOVptLTEwLjEsMjEuM2MtMS44LDEzLjYtOC4xLDI1LjYtMTguMywzNC4ybDE3LjEsMTcuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdsLTM2LjMsMzYuM2MtMS42LDEuNi00LjEsMS42LTUuNywwbC0xOC41LTE4LjVjLTguOC0xLjMtMTctMy45LTI0LjYtNy42bDMuMywzLjNjMS42LDEuNiwxLjYsNC4xLDAsNS43bC0xMy4xLDEzLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtNTcuMy01Ny4zYy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw3LjgsNy44Yy42LS42LDEuMS0xLjMsMS43LTIuMWwzLjUtNC43YzEuMy0xLjcsMS45LTMuOCwxLjUtNS44bC0yLjUtOS4yTDkyLjQsODguMWwxMy42LDEzLjZjMS42LDEuNiw0LjEsMS42LDUuNywwbDIwLjYtMjAuNmMxLjYtMS42LDEuNi00LjEsMC01LjdsLTIwLjYtMjAuNmMtMS42LTEuNi00LjEtMS42LTUuNywwTDM3LjUsMTYxLjFjLTEuNiwxLjYtNC4xLDEuNi01LjcsMGwtMTYuNC0xNi40Yy0xLjYtMS42LTEuNi00LjEsMC01LjdsMTYuNC0xNi40YzEuNi0xLjYsNC4xLTEuNiw1LjcsMGw0NS40LDQ1LjRjMS42LDEuNiw0LjEsMS42LDUuNywwbDI1LjItMjcuNmMxLjYtMS42LDQuMS0xLjYsNS43LDBsMjAuNiwyMC42YzEuNiwxLjYsNC4xLDEuNiw1LjcsMGwyMS40LTIzLjRjMS42LTEuNiw0LjEtMS42LDUuNywwbDMzLjIsNDEuMWMxLjYsMS42LDEuNiw0LjEsMCw1LjdaIi8+PC9zdmc+" alt="AWS Logo"/>
+                        <h3>Cloud Platforms</h3>
                     </div>
                 </div>
             </div>
@@ -1150,7 +1233,7 @@
                      <h1>About <span>Trinexus Technologies</span></h1>
                 </div>
                 <div class="about-grid">
-                    <div class="about-content">
+                    <div class="about-card">
                         <h3>Our Mission</h3>
                         <p>To accelerate European progress by creating intelligent systems that solve complex problems. We believe AI should augment human capabilities, not replace them, fostering innovation and growth across the continent.</p>
                          <ul>
@@ -1159,14 +1242,26 @@
                             <li>🇪🇺 EU-wide impact through scalable solutions</li>
                         </ul>
                     </div>
-                    <div class="about-content">
+                    <div class="about-card">
                         <h3>Core Values</h3>
-                        <ul>
-                            <li><strong>Excellence:</strong> We deliver only the highest quality solutions that exceed expectations.</li>
-                            <li><strong>Transparency:</strong> Clear communication and ethical AI development guide every decision.</li>
-                            <li><strong>Innovation:</strong> Continuous learning and adaptation drive our technological advancement.</li>
-                            <li><strong>Impact:</strong> Every solution we create generates measurable business value for our European partners.</li>
-                        </ul>
+                        <div>
+                            <div class="value-item">
+                                <strong>Excellence</strong>
+                                <span>We deliver only the highest quality solutions that exceed expectations.</span>
+                            </div>
+                            <div class="value-item">
+                                <strong>Transparency</strong>
+                                <span>Clear communication and ethical AI development guide every decision.</span>
+                            </div>
+                            <div class="value-item">
+                                <strong>Innovation</strong>
+                                <span>Continuous learning and adaptation drive our technological advancement.</span>
+                            </div>
+                            <div class="value-item">
+                                <strong>Impact</strong>
+                                <span>Every solution we create generates measurable business value for our European partners.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1180,22 +1275,22 @@
                 </div>
                 <div class="contact-grid">
                     <div class="contact-form-wrapper">
-                         <form id="aiForm" class="compact-form" action="mailto:hello@trinexustechnologies.com" method="post" enctype="text/plain">
+                         <form id="aiForm" class="compact-form" autocomplete="off" action="mailto:hello@trinexustechnologies.com" method="post" enctype="text/plain">
                             <h2>Tell Us About Your Project</h2>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="full-name">Full Name *</label>
-                                    <input type="text" id="full-name" name="Full Name" required placeholder="Your Name">
+                                    <input type="text" id="full-name" name="Full Name" required placeholder="Your Name" autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Business Email *</label>
-                                    <input type="email" id="email" name="Business Email" required placeholder="name@company.com">
+                                    <input type="email" id="email" name="Business Email" required placeholder="name@company.com" autocomplete="off">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="company">Company Name *</label>
-                                    <input type="text" id="company" name="Company Name" required placeholder="Your Company">
+                                    <input type="text" id="company" name="Company Name" required placeholder="Your Company" autocomplete="off">
                                 </div>
                                 <div class="form-group">
                                     <label for="industry">Industry</label>
@@ -1363,4 +1458,6 @@
     </script>
 </body>
 </html>
+
+
 
