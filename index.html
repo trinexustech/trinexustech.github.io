@@ -1092,8 +1092,8 @@
     <nav class="navbar full-bleed">
         <div class="container nav-container">
             <a href="#home" class="nav-logo">
-                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTAgMCBDMi42ODk5Mjk1OCAyLjE2ODIyMzg0IDUuMjY5OTU2MDcgNC40MTgzMDU0MiA3LjgzOTg0Mzc1IDYuNzI2NTYyNSBDOC44NzgxODM1OSA3LjU1MjIwNzAzIDguODc4MTgzNTkgNy41NTIyMDcwMyA5LjkzNzUgOC4zOTQ1MzEyNSBDMTYuMzU3NTIzOSAxMy41NjM3MzUzOSAyMC45OTU1NTY1MSAyMC4xMzU5ODEwNyAyNS44Mzk4NDM3NSAyNi43MjY1NjI1IEMyNi4zNDY0NDUzMSAyNy4zNzc1MzkwNiAyNi44NTMwNDY4OCAyOC4wMjg1MTU2MyAyNy4zNzUgMjguNjk5MjE4NzUgQzMwLjY3NzExOTcyIDMzLjAyMDY0MjMxIDMyLjk1NTQyODIgMzcuNzcyMDgxMTUgMzUuMzEyNSA0Mi42NjAxNTYyNSBDMzYuNjY3ODIxMzcgNDUuMz" />
-                <span>Trinexus Technologies</span>
+                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTAgMCBDMi42ODk5Mjk1OCAyLjE2ODIyMzg0IDUuMjY5OTU2MDcgNC40MTgzMDU0MiA3LjgzOTg0Mzc1IDYuNzI2NTYyNSBDOC44NzgxODM1OSA3LjU1MjIwNzAzIDguODc4MTgzNTkgNy41NTIyMDcwMyA5LjkzNzUgOC4zOTQ1MzEyNSBDMTYuMzU3NTIzOSAxMy41NjM3MzUzOSAyMC45OTU1NTY1MSAyMC4xMzU5ODEwNyAyNS44Mzk4NDM3NSAyNi43MjY1NjI1IEMyNi4zNDY0NDUzMSAyNy4zNzc1MzkwNiAyNi44NTMwNDY4OCAyOC4wMjg1MTU2MyAyNy4zNzUgMjguNjk5MjE4NzUgQzMwLjY3NzExOTcyIDMzLjAyMDY0MjMxIDMyLjk1NTQyODIgMzcuNzcyMDgxMTUgMzUuMzEyNSA0Mi42NjAxNTYyNSBDMzYuNjY3ODIxMzcgNDUuM" />
+                <span data-key="footerTitle">Trinexus Technologies</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="touch-interactive" data-key="navHome">Home</a></li>
@@ -1118,9 +1118,11 @@
     </nav>
 
 
+    <!-- Hero Section -->
     <header id="home" class="hero full-bleed">
         <div class="hero-content">
-            <h1 data-key="heroTitle">AI Solutions <span class="subtitle" data-key="heroSubtitle">for the European Market</span></h1>
+            <!-- FIXED: Split title and subtitle into separate spans for independent translation -->
+            <h1><span data-key="heroTitle">AI Solutions</span> <span class="subtitle" data-key="heroSubtitle">for the European Market</span></h1>
             <p class="tagline" data-key="heroTagline">Engineered in the EU, Innovating for Europe.</p>
             <p class="hero-description" data-key="heroDescription">Trinexus Technologies develops cutting-edge artificial intelligence products that empower businesses across the EU. We build the future, one intelligent solution at a time.</p>
             <div class="hero-tags">
@@ -1136,13 +1138,15 @@
     </header>
 
     <main>
+        <!-- Solutions Section -->
         <section id="solutions" class="full-bleed">
             <div class="container">
                 <div class="section-header">
-                    <h1 data-key="solutionsTitle">Our Solutions <span data-key="solutionsSubtitle">Across Industries</span></h1>
+                    <h1><span data-key="solutionsTitle">Our Solutions</span> <span data-key="solutionsSubtitle">Across Industries</span></h1>
                     <p data-key="solutionsDescription">We develop specialized artificial intelligence products tailored to the unique challenges and opportunities within each industry sector.</p>
                 </div>
                 <div class="card-container">
+                    <!-- Healthcare AI -->
                     <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🩺</div>
@@ -1160,6 +1164,7 @@
                             <div class="tags"><span data-key="solCard1Ind1">Hospitals</span><span data-key="solCard1Ind2">Clinics</span><span data-key="solCard1Ind3">Med Tech</span></div>
                         </div>
                     </div>
+                    <!-- Financial AI -->
                     <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">💰</div>
@@ -1177,6 +1182,7 @@
                             <div class="tags"><span data-key="solCard2Ind1">Banks</span><span data-key="solCard2Ind2">FinTech</span><span data-key="solCard2Ind3">Insurance</span></div>
                         </div>
                     </div>
+                    <!-- Manufacturing AI -->
                     <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🏭</div>
@@ -1194,7 +1200,8 @@
                             <div class="tags"><span data-key="solCard3Ind1">Automotive</span><span data-key="solCard3Ind2">Electronics</span><span data-key="solCard3Ind3">Aerospace</span></div>
                         </div>
                     </div>
-                     <div class="card touch-interactive">
+                     <!-- Retail AI -->
+                    <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🛍️</div>
                             <h2 data-key="solCard4Title">Retail AI</h2>
@@ -1211,6 +1218,7 @@
                             <div class="tags"><span data-key="solCard4Ind1">E-commerce</span><span data-key="solCard4Ind2">Fashion</span><span data-key="solCard4Ind3">Grocery</span></div>
                         </div>
                     </div>
+                    <!-- Energy AI -->
                     <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">⚡</div>
@@ -1228,6 +1236,7 @@
                             <div class="tags"><span data-key="solCard5Ind1">Utilities</span><span data-key="solCard5Ind2">Solar</span><span data-key="solCard5Ind3">Wind</span></div>
                         </div>
                     </div>
+                    <!-- Transportation AI -->
                     <div class="card touch-interactive">
                         <div class="card-header">
                             <div class="icon">🚚</div>
@@ -1249,13 +1258,15 @@
             </div>
         </section>
 
+        <!-- Case Studies Section -->
         <section id="case-studies" class="full-bleed">
             <div class="container">
                 <div class="section-header">
-                    <h1 data-key="caseStudiesTitle">Case Studies <span data-key="caseStudiesSubtitle">Real Impact</span></h1>
+                    <h1><span data-key="caseStudiesTitle">Case Studies</span> <span data-key="caseStudiesSubtitle">Real Impact</span></h1>
                     <p data-key="caseStudiesDescription">Discover how our AI solutions have transformed businesses, delivering measurable results and competitive advantages.</p>
                 </div>
                 <div class="ai-grid">
+                    <!-- Card 1: Healthcare -->
                     <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=center" alt="Medical Diagnostics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Healthcare';">
@@ -1279,6 +1290,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 2: Financial Services -->
                     <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center" alt="Financial Analytics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Finance';">
@@ -1302,6 +1314,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 3: Automotive -->
                     <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&crop=center" alt="Automotive Manufacturing" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=Automotive';">
@@ -1325,6 +1338,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 4: E-commerce -->
                     <div class="ai-card touch-interactive">
                         <div class="ai-card-image">
                             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center" alt="E-commerce Analytics" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EFEFEF/AAAAAA&text=E-commerce';">
@@ -1369,6 +1383,7 @@
             </div>
         </section>
 
+        <!-- Our Technology Stack Section -->
         <section id="tech-stack" class="full-bleed">
             <div class="container">
                 <div class="section-header">
@@ -1420,10 +1435,11 @@
             </div>
         </section>
         
+        <!-- About Section -->
         <section id="about" class="full-bleed">
             <div class="container">
                 <div class="section-header">
-                      <h1 data-key="aboutTitle">About <span>Trinexus Technologies</span></h1>
+                      <h1><span data-key="aboutTitle">About</span> <span>Trinexus Technologies</span></h1>
                       <p data-key="aboutDescription">Founded with a vision to democratize artificial intelligence across industries, Trinexus Technologies has emerged as a leading technology holding company specializing in cutting-edge AI solutions that drive real business transformation.</p>
                 </div>
                 <div class="about-grid">
@@ -1467,10 +1483,11 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="full-bleed">
             <div class="container" id="form-container">
                 <div class="section-header">
-                      <h1 data-key="contactTitle">Get Started <span>With AI</span></h1>
+                      <h1><span data-key="contactTitle">Get Started</span> <span>With AI</span></h1>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-form-wrapper">
@@ -1564,6 +1581,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="full-bleed">
         <div class="container">
             <div class="footer-grid">
@@ -1703,30 +1721,30 @@
                     csSolution: 'Solution:',
                     csSolution1: 'Deep learning model for automated radiology analysis with real-time processing.',
                     csResults: 'Key Results:',
-                    csResult1-1: '⏱ 75% faster diagnoses',
-                    csResult1-2: '📈 99.2% accuracy rate',
-                    csResult1-3: '💵 €1.8M cost savings annually',
+                    csResult1_1: '⏱ 75% faster diagnoses',
+                    csResult1_2: '📈 99.2% accuracy rate',
+                    csResult1_3: '💵 €1.8M cost savings annually',
                     csButton: 'View Full Case Study →',
                     csBadge2: 'Financial Services',
                     csChallenge2: 'Detect and prevent fraudulent transactions in real-time across European networks.',
                     csSolution2: 'AI-powered fraud detection system with behavioral analysis and pattern recognition.',
-                    csResult2-1: '📈 89% reduction in fraud losses',
-                    csResult2-2: '⏱ 0.3s transaction processing time',
-                    csResult2-3: '🛡️ 99.9% uptime',
+                    csResult2_1: '📈 89% reduction in fraud losses',
+                    csResult2_2: '⏱ 0.3s transaction processing time',
+                    csResult2_3: '🛡️ 99.9% uptime',
                     csBadge3: 'Automotive',
                     csChallenge3: 'Minimize equipment downtime and optimize production efficiency in German factories.',
                     csSolution3: 'Predictive maintenance AI with IoT sensor integration and automated alerts.',
-                    csResult3-1: '⏱ 60% reduction in downtime',
-                    csResult3-2: '📈 25% increase in production efficiency',
-                    csResult3-3: '💵 €4.5M savings',
+                    csResult3_1: '⏱ 60% reduction in downtime',
+                    csResult3_2: '📈 25% increase in production efficiency',
+                    csResult3_3: '💵 €4.5M savings',
                     csBadge4: 'E-commerce',
                     csChallenge4: 'Increase customer retention and optimize inventory for an EU-based online retailer.',
                     csSolution4: 'Customer behavior AI with personalized recommendations and demand forecasting.',
-                    csResult4-1: '📈 40% increase in customer retention',
-                    csResult4-2: '📉 30% reduction in inventory costs',
-                    csResult4-3: '💵 2x ROI',
+                    csResult4_1: '📈 40% increase in customer retention',
+                    csResult4_2: '📉 30% reduction in inventory costs',
+                    csResult4_3: '💵 2x ROI',
                     metric1: 'Average ROI',
-                    metricValue2: '< 90 Tage',
+                    metricValue2: '< 90 Days',
                     metric2: 'Implementation',
                     metric3: 'Success Rate',
                     metric4: 'Client Satisfaction',
@@ -1742,6 +1760,7 @@
                     techTitle8: 'Cloud Platforms',
                     techDesc8: 'Leveraging AWS and Azure for scalable cloud infrastructure.',
                     aboutTitle: 'About',
+                    aboutTitleSpan: 'Trinexus Technologies',
                     aboutDescription: 'Founded with a vision to democratize artificial intelligence across industries, Trinexus Technologies has emerged as a leading technology holding company specializing in cutting-edge AI solutions that drive real business transformation.',
                     aboutMission: 'Our Mission',
                     aboutMissionDesc: 'To accelerate European progress by creating intelligent systems that solve complex problems. We believe AI should augment human capabilities, not replace them.',
@@ -1758,6 +1777,7 @@
                     value4Title: 'Impact',
                     value4Desc: 'Every solution we create generates measurable business value for our European partners.',
                     contactTitle: 'Get Started',
+                    contactTitleSpan: 'With AI',
                     formTitle: 'Tell Us About Your Project',
                     formName: 'Full Name *',
                     formNamePlaceholder: 'Your Name',
@@ -1878,28 +1898,28 @@
                     csSolution: 'Lösung:',
                     csSolution1: 'Deep-Learning-Modell zur automatisierten Radiologieanalyse mit Echtzeitverarbeitung.',
                     csResults: 'Wichtige Ergebnisse:',
-                    csResult1-1: '⏱ 75% schnellere Diagnosen',
-                    csResult1-2: '📈 99,2% Genauigkeitsrate',
-                    csResult1-3: '💵 1,8 Mio. € jährliche Kosteneinsparung',
+                    csResult1_1: '⏱ 75% schnellere Diagnosen',
+                    csResult1_2: '📈 99,2% Genauigkeitsrate',
+                    csResult1_3: '💵 1,8 Mio. € jährliche Kosteneinsparung',
                     csButton: 'Vollständige Fallstudie ansehen →',
                     csBadge2: 'Finanzdienstleistungen',
                     csChallenge2: 'Betrügerische Transaktionen in Echtzeit in europäischen Netzwerken erkennen und verhindern.',
                     csSolution2: 'KI-gestütztes Betrugserkennungssystem mit Verhaltensanalyse und Mustererkennung.',
-                    csResult2-1: '📈 89% Reduzierung der Betrugsverluste',
-                    csResult2-2: '⏱ 0,3s Transaktionsverarbeitungszeit',
-                    csResult2-3: '🛡️ 99,9% Verfügbarkeit',
+                    csResult2_1: '📈 89% Reduzierung der Betrugsverluste',
+                    csResult2_2: '⏱ 0,3s Transaktionsverarbeitungszeit',
+                    csResult2_3: '🛡️ 99,9% Verfügbarkeit',
                     csBadge3: 'Automobilindustrie',
                     csChallenge3: 'Anlagenausfallzeiten minimieren und Produktionseffizienz in deutschen Fabriken optimieren.',
                     csSolution3: 'Vorausschauende Wartungs-KI mit IoT-Sensorintegration und automatisierten Warnmeldungen.',
-                    csResult3-1: '⏱ 60% Reduzierung der Ausfallzeiten',
-                    csResult3-2: '📈 25% Steigerung der Produktionseffizienz',
-                    csResult3-3: '💵 4,5 Mio. € Einsparungen',
+                    csResult3_1: '⏱ 60% Reduzierung der Ausfallzeiten',
+                    csResult3_2: '📈 25% Steigerung der Produktionseffizienz',
+                    csResult3_3: '💵 4,5 Mio. € Einsparungen',
                     csBadge4: 'E-Commerce',
                     csChallenge4: 'Kundenbindung erhöhen und Lagerbestand für einen EU-Online-Händler optimieren.',
                     csSolution4: 'KI für Kundenverhalten mit personalisierten Empfehlungen und Nachfrageprognosen.',
-                    csResult4-1: '📈 40% Steigerung der Kundenbindung',
-                    csResult4-2: '📉 30% Reduzierung der Lagerkosten',
-                    csResult4-3: '💵 2x ROI',
+                    csResult4_1: '📈 40% Steigerung der Kundenbindung',
+                    csResult4_2: '📉 30% Reduzierung der Lagerkosten',
+                    csResult4_3: '💵 2x ROI',
                     metric1: 'Durchschnittl. ROI',
                     metricValue2: '< 90 Tage',
                     metric2: 'Implementierung',
@@ -1917,6 +1937,7 @@
                     techTitle8: 'Cloud-Plattformen',
                     techDesc8: 'Nutzung von AWS und Azure für skalierbare Cloud-Infrastruktur.',
                     aboutTitle: 'Über',
+                    aboutTitleSpan: 'Trinexus Technologies',
                     aboutDescription: 'Gegründet mit der Vision, künstliche Intelligenz branchenübergreifend zu demokratisieren, hat sich Trinexus Technologies zu einer führenden Technologie-Holding entwickelt, die auf hochmoderne KI-Lösungen spezialisiert ist, die echte Geschäftstransformationen vorantreiben.',
                     aboutMission: 'Unsere Mission',
                     aboutMissionDesc: 'Den europäischen Fortschritt zu beschleunigen, indem wir intelligente Systeme schaffen, die komplexe Probleme lösen. Wir glauben, dass KI die menschlichen Fähigkeiten erweitern und nicht ersetzen sollte.',
@@ -1933,6 +1954,7 @@
                     value4Title: 'Wirkung',
                     value4Desc: 'Jede von uns geschaffene Lösung generiert messbaren Geschäftswert für unsere europäischen Partner.',
                     contactTitle: 'Starten Sie',
+                    contactTitleSpan: 'mit KI',
                     formTitle: 'Erzählen Sie uns von Ihrem Projekt',
                     formName: 'Vollständiger Name *',
                     formNamePlaceholder: 'Ihr Name',
@@ -1985,7 +2007,7 @@
                 document.querySelectorAll('[data-key]').forEach(element => {
                     const key = element.getAttribute('data-key');
                     if (translations[lang] && translations[lang][key]) {
-                        element.innerHTML = translations[lang][key];
+                        element.textContent = translations[lang][key];
                     }
                 });
 
